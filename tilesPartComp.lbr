@@ -7,7 +7,7 @@
 <setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.05" altunitdist="mm" altunit="mm"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="yes" active="yes"/>
@@ -37,7 +37,7 @@
 <layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="27" name="tValues" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="28" name="bValues" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="29" name="tStop" color="7" fill="3" visible="yes" active="yes"/>
+<layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="yes" active="yes"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="yes" active="yes"/>
 <layer number="32" name="bCream" color="7" fill="5" visible="yes" active="yes"/>
@@ -53,7 +53,7 @@
 <layer number="42" name="bRestrict" color="1" fill="10" visible="yes" active="yes"/>
 <layer number="43" name="vRestrict" color="2" fill="10" visible="yes" active="yes"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="45" name="Holes" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
 <layer number="46" name="Milling" color="3" fill="1" visible="yes" active="yes"/>
 <layer number="47" name="Measures" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="48" name="Document" color="7" fill="1" visible="yes" active="yes"/>
@@ -1016,8 +1016,6 @@ Li-Po cell battery pads, from PowerStream</description>
 Johanson Technology 2.45 GHz antenna with vertical layout, placeholders for π-matching network circuit with 0805 SMD passives</description>
 <smd name="1" x="0" y="0" dx="1.8" dy="1.5" layer="1"/>
 <smd name="2" x="0" y="9" dx="1.8" dy="1.5" layer="1"/>
-<rectangle x1="-9" y1="-0.8" x2="9" y2="10.25" layer="39"/>
-<rectangle x1="-9" y1="-0.8" x2="9" y2="10.25" layer="41"/>
 <wire x1="1" y1="9" x2="1.5" y2="8.5" width="0.127" layer="21" curve="-90"/>
 <wire x1="1.5" y1="8.5" x2="1.5" y2="0.5" width="0.127" layer="21"/>
 <wire x1="1.5" y1="0.5" x2="1" y2="0" width="0.127" layer="21" curve="-90"/>
@@ -1025,11 +1023,108 @@ Johanson Technology 2.45 GHz antenna with vertical layout, placeholders for π-m
 <wire x1="-1" y1="9" x2="-1.5" y2="8.5" width="0.127" layer="21" curve="90"/>
 <wire x1="-1" y1="0" x2="-1.5" y2="0.5" width="0.127" layer="21" curve="-90"/>
 <rectangle x1="-0.5" y1="1.5" x2="0.5" y2="3.5" layer="21"/>
-<rectangle x1="-9" y1="-1.75" x2="-3.1" y2="-0.8" layer="39"/>
-<rectangle x1="3.1" y1="-1.75" x2="9" y2="-0.8" layer="39"/>
-<rectangle x1="-9" y1="-1.75" x2="-1" y2="-0.8" layer="41"/>
-<rectangle x1="3.1" y1="-1.75" x2="9" y2="-0.8" layer="39"/>
-<rectangle x1="1" y1="-1.75" x2="9" y2="-0.8" layer="41"/>
+<polygon width="0.127" layer="41" pour="hatch">
+<vertex x="-9" y="10.2"/>
+<vertex x="9" y="10.2"/>
+<vertex x="9" y="-1.7"/>
+<vertex x="1" y="-1.7"/>
+<vertex x="1" y="0.9"/>
+<vertex x="-1" y="0.9"/>
+<vertex x="-1" y="-1.7"/>
+<vertex x="-9" y="-1.7"/>
+</polygon>
+<polygon width="0.127" layer="39" pour="hatch">
+<vertex x="-9" y="10.2"/>
+<vertex x="9" y="10.2"/>
+<vertex x="9" y="-1.7"/>
+<vertex x="3.1" y="-1.7"/>
+<vertex x="3.1" y="-0.8"/>
+<vertex x="-3.1" y="-0.8"/>
+<vertex x="-3.1" y="-1.7"/>
+<vertex x="-9" y="-1.7"/>
+</polygon>
+</package>
+<package name="0402_RF">
+<description>&lt;p&gt;&lt;b&gt;1005 (0402) package&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;For 2450FM07A0029 impedance matcher Johanson Technology for nRF52832&lt;/p&gt;</description>
+<wire x1="-0.2704" y1="0.2286" x2="0.2704" y2="0.2286" width="0.1524" layer="51"/>
+<wire x1="0.2704" y1="-0.2286" x2="-0.2704" y2="-0.2286" width="0.1524" layer="51"/>
+<wire x1="-1.2" y1="0.85" x2="1.2" y2="0.85" width="0.0508" layer="39"/>
+<wire x1="1.2" y1="0.85" x2="1.2" y2="-0.85" width="0.0508" layer="39"/>
+<wire x1="1.2" y1="-0.85" x2="-1.2" y2="-0.85" width="0.0508" layer="39"/>
+<wire x1="-1.2" y1="-0.85" x2="-1.2" y2="0.85" width="0.0508" layer="39"/>
+<smd name="1" x="-0.6125" y="0" dx="0.6" dy="0.6" layer="1"/>
+<smd name="3" x="0.6125" y="0" dx="0.6" dy="0.6" layer="1"/>
+<text x="0" y="1.062" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-0.962" size="0.6096" layer="27" font="vector" ratio="20" align="top-center">&gt;VALUE</text>
+<rectangle x1="-0.554" y1="-0.3048" x2="-0.254" y2="0.3048" layer="51"/>
+<rectangle x1="0.2588" y1="-0.3048" x2="0.5588" y2="0.3048" layer="51"/>
+<smd name="GND@4" x="0" y="0.3625" dx="0.3" dy="0.725" layer="1"/>
+<smd name="GND@2" x="0" y="-0.3625" dx="0.3" dy="0.725" layer="1"/>
+<wire x1="-0.9" y1="0.5" x2="-0.7" y2="0.7" width="0.1016" layer="21" curve="-90"/>
+<wire x1="-0.7" y1="0.7" x2="-0.4" y2="0.7" width="0.1016" layer="21"/>
+<wire x1="0.4" y1="0.7" x2="0.7" y2="0.7" width="0.1016" layer="21"/>
+<wire x1="0.7" y1="0.7" x2="0.9" y2="0.5" width="0.1016" layer="21" curve="-90"/>
+<wire x1="-0.9" y1="-0.5" x2="-0.7" y2="-0.7" width="0.1016" layer="21" curve="90"/>
+<wire x1="-0.7" y1="-0.7" x2="-0.4" y2="-0.7" width="0.1016" layer="21"/>
+<wire x1="0.4" y1="-0.7" x2="0.7" y2="-0.7" width="0.1016" layer="21"/>
+<wire x1="0.7" y1="-0.7" x2="0.9" y2="-0.5" width="0.1016" layer="21" curve="90"/>
+<rectangle x1="-0.7" y1="0.45" x2="-0.35" y2="0.6" layer="21"/>
+<rectangle x1="-0.7" y1="-0.6" x2="-0.35" y2="-0.45" layer="21"/>
+</package>
+<package name="DFN-6">
+<smd name="DNC" x="0" y="0" dx="1.6" dy="2.5" layer="1"/>
+<smd name="3" x="-1.45" y="-1.025" dx="0.85" dy="0.45" layer="1" roundness="25"/>
+<smd name="2" x="-1.45" y="0" dx="0.85" dy="0.45" layer="1" roundness="25"/>
+<smd name="1" x="-1.45" y="1.025" dx="0.85" dy="0.45" layer="1" roundness="25"/>
+<smd name="6" x="1.45" y="1.025" dx="0.85" dy="0.45" layer="1" roundness="25"/>
+<smd name="5" x="1.45" y="0" dx="0.85" dy="0.45" layer="1" roundness="25"/>
+<smd name="4" x="1.45" y="-1.025" dx="0.85" dy="0.45" layer="1" roundness="25"/>
+<circle x="-2.2" y="1.6" radius="0.14141875" width="0.127" layer="21"/>
+</package>
+<package name="PWSON_DMB">
+<description>&lt;p&gt;&lt;b&gt;PWSON DMB 6 pin 3x3 mm&lt;/b&gt;&lt;/p&gt;
+For TI HDC1080 humidity sensor</description>
+<smd name="DNC" x="0" y="0" dx="1.5" dy="2.4" layer="1" roundness="20" cream="no"/>
+<smd name="3" x="-1.4" y="-1" dx="0.6" dy="0.4" layer="1" roundness="25"/>
+<smd name="2" x="-1.4" y="0" dx="0.6" dy="0.4" layer="1" roundness="25"/>
+<smd name="1" x="-1.4" y="1" dx="0.6" dy="0.4" layer="1" roundness="25"/>
+<smd name="6" x="1.4" y="1" dx="0.6" dy="0.4" layer="1" roundness="25"/>
+<smd name="5" x="1.4" y="0" dx="0.6" dy="0.4" layer="1" roundness="25"/>
+<smd name="4" x="1.4" y="-1" dx="0.6" dy="0.4" layer="1" roundness="25"/>
+<circle x="-2.2" y="1.6" radius="0.14141875" width="0.127" layer="21"/>
+<hole x="0" y="-0.95" drill="0.2"/>
+<hole x="0" y="0.95" drill="0.2"/>
+<hole x="0.5" y="0" drill="0.2"/>
+<hole x="-0.5" y="0" drill="0.2"/>
+<polygon width="0.127" layer="31">
+<vertex x="-0.5" y="1.1"/>
+<vertex x="0.5" y="1.1" curve="-90"/>
+<vertex x="0.6" y="1"/>
+<vertex x="0.6" y="0.3" curve="-90"/>
+<vertex x="0.5" y="0.2"/>
+<vertex x="-0.5" y="0.2" curve="-90"/>
+<vertex x="-0.6" y="0.3"/>
+<vertex x="-0.6" y="1" curve="-90"/>
+</polygon>
+<polygon width="0.127" layer="31">
+<vertex x="-0.5" y="-0.2"/>
+<vertex x="0.5" y="-0.2" curve="-90"/>
+<vertex x="0.6" y="-0.3"/>
+<vertex x="0.6" y="-1" curve="-90"/>
+<vertex x="0.5" y="-1.1"/>
+<vertex x="-0.5" y="-1.1" curve="-90"/>
+<vertex x="-0.6" y="-1"/>
+<vertex x="-0.6" y="-0.3" curve="-90"/>
+</polygon>
+<wire x1="-0.9" y1="-0.3" x2="-1" y2="-0.4" width="0.127" layer="21" curve="90"/>
+<wire x1="-1" y1="-0.4" x2="-1" y2="-0.8" width="0.127" layer="21"/>
+<wire x1="-1" y1="-0.8" x2="-0.9" y2="-0.9" width="0.127" layer="21" curve="90"/>
+<wire x1="-0.9" y1="-0.9" x2="-0.9" y2="-0.3" width="0.127" layer="21"/>
+<wire x1="0.9" y1="-0.3" x2="1" y2="-0.4" width="0.127" layer="21" curve="-90"/>
+<wire x1="1" y1="-0.4" x2="1" y2="-0.8" width="0.127" layer="21"/>
+<wire x1="1" y1="-0.8" x2="0.9" y2="-0.9" width="0.127" layer="21" curve="-90"/>
+<wire x1="0.9" y1="-0.9" x2="0.9" y2="-0.3" width="0.127" layer="21"/>
 </package>
 </packages>
 <symbols>
@@ -1370,6 +1465,46 @@ N-Channel NexFET™ Power MOSFET</description>
 <text x="-5.08" y="10.16" size="1.27" layer="95">&gt;NAME</text>
 <text x="-5.08" y="-10.16" size="1.27" layer="96">&gt;VALUE</text>
 <wire x1="-5.08" y1="0" x2="-5.08" y2="-2.54" width="0.254" layer="94"/>
+</symbol>
+<symbol name="2450FM07A0029">
+<text x="-6.35" y="6.35" size="1.778" layer="95">&gt;Name</text>
+<text x="-6.35" y="-6.35" size="1.778" layer="96">&gt;Value</text>
+<pin name="IN" x="-17.78" y="2.54" visible="pin" length="middle" direction="in"/>
+<pin name="OUT" x="15.24" y="2.54" visible="pin" length="middle" direction="out" rot="R180"/>
+<pin name="GND@4" x="15.24" y="0" visible="pin" length="middle" direction="sup" rot="R180"/>
+<pin name="GND@2" x="-17.78" y="0" visible="pin" length="middle" direction="sup"/>
+<wire x1="-12.7" y1="5.08" x2="-12.7" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-12.7" y1="-2.54" x2="10.16" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-2.54" x2="10.16" y2="5.08" width="0.254" layer="94"/>
+<wire x1="10.16" y1="5.08" x2="-12.7" y2="5.08" width="0.254" layer="94"/>
+</symbol>
+<symbol name="SI7051-A20">
+<pin name="SDA" x="-15.24" y="5.08" visible="pin" length="middle"/>
+<pin name="GND" x="-15.24" y="0" visible="pin" length="middle" direction="sup"/>
+<pin name="DNC@3" x="-15.24" y="-5.08" visible="pin" length="middle" direction="nc"/>
+<pin name="SCL" x="15.24" y="5.08" visible="pin" length="middle" rot="R180"/>
+<pin name="VDD" x="15.24" y="0" visible="pin" length="middle" direction="sup" rot="R180"/>
+<pin name="DNC@4" x="15.24" y="-5.08" visible="pin" length="middle" direction="nc" rot="R180"/>
+<wire x1="-10.16" y1="7.62" x2="-10.16" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="-7.62" x2="10.16" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-7.62" x2="10.16" y2="7.62" width="0.254" layer="94"/>
+<wire x1="10.16" y1="7.62" x2="-10.16" y2="7.62" width="0.254" layer="94"/>
+<text x="-2.54" y="10.16" size="1.27" layer="95">&gt;Name</text>
+<text x="-2.54" y="-10.16" size="1.27" layer="96">&gt;Value</text>
+</symbol>
+<symbol name="HDC1080">
+<pin name="SDA" x="-15.24" y="5.08" visible="pin" length="middle"/>
+<pin name="GND" x="-15.24" y="0" visible="pin" length="middle" direction="sup"/>
+<pin name="DNC@3" x="-15.24" y="-5.08" visible="pin" length="middle" direction="nc"/>
+<pin name="SCL" x="15.24" y="5.08" visible="pin" length="middle" rot="R180"/>
+<pin name="VDD" x="15.24" y="0" visible="pin" length="middle" direction="sup" rot="R180"/>
+<pin name="DNC@4" x="15.24" y="-5.08" visible="pin" length="middle" direction="nc" rot="R180"/>
+<wire x1="-10.16" y1="7.62" x2="-10.16" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="-7.62" x2="10.16" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-7.62" x2="10.16" y2="7.62" width="0.254" layer="94"/>
+<wire x1="10.16" y1="7.62" x2="-10.16" y2="7.62" width="0.254" layer="94"/>
+<text x="-2.54" y="10.16" size="1.27" layer="95">&gt;Name</text>
+<text x="-2.54" y="-10.16" size="1.27" layer="96">&gt;Value</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -1881,6 +2016,68 @@ N-Channel NexFET™ Power MOSFET</description>
 <connects>
 <connect gate="2450AT45A100" pin="1" pad="1"/>
 <connect gate="2450AT45A100" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="2450FM07A0029" prefix="F">
+<description>&lt;p&gt;&lt;b&gt;2450FM07A0029 Impedance matcher filter&lt;/b&gt;&lt;/p&gt;
+From Johanson Technology, for nRF52832 QFA</description>
+<gates>
+<gate name="2450FM07A0029" symbol="2450FM07A0029" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="0402_RF">
+<connects>
+<connect gate="2450FM07A0029" pin="GND@2" pad="GND@2"/>
+<connect gate="2450FM07A0029" pin="GND@4" pad="GND@4"/>
+<connect gate="2450FM07A0029" pin="IN" pad="1"/>
+<connect gate="2450FM07A0029" pin="OUT" pad="3"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SI7051-A20" prefix="T">
+<gates>
+<gate name="SI7051-A20" symbol="SI7051-A20" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="DFN-6">
+<connects>
+<connect gate="SI7051-A20" pin="DNC@3" pad="3"/>
+<connect gate="SI7051-A20" pin="DNC@4" pad="4"/>
+<connect gate="SI7051-A20" pin="GND" pad="2"/>
+<connect gate="SI7051-A20" pin="SCL" pad="6"/>
+<connect gate="SI7051-A20" pin="SDA" pad="1"/>
+<connect gate="SI7051-A20" pin="VDD" pad="5"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="HDC1080" prefix="H">
+<description>&lt;p&gt;&lt;b&gt;HDC1080 Humidity and temperature sensor&lt;/b&gt;&lt;/p&gt;
+Ti low power, high accuracy sensor</description>
+<gates>
+<gate name="HDC1080" symbol="HDC1080" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="PWSON_DMB">
+<connects>
+<connect gate="HDC1080" pin="DNC@3" pad="3"/>
+<connect gate="HDC1080" pin="DNC@4" pad="4"/>
+<connect gate="HDC1080" pin="GND" pad="2"/>
+<connect gate="HDC1080" pin="SCL" pad="6"/>
+<connect gate="HDC1080" pin="SDA" pad="1"/>
+<connect gate="HDC1080" pin="VDD" pad="5"/>
 </connects>
 <technologies>
 <technology name=""/>
