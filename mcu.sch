@@ -10549,10 +10549,9 @@ This standard 0.05" 10-pin connector is for use with the Cortex M0/M3's native S
 <part name="X1" library="tilesPartComp" deviceset="LFXTAL069526" device=""/>
 <part name="RGB1" library="tilesPartComp" deviceset="150080M153000" device=""/>
 <part name="VDD_10" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="V+" device="" value="3.3V"/>
-<part name="GND18" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="R10" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="5"/>
-<part name="R13" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="65"/>
-<part name="R14" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="5"/>
+<part name="R10" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="22"/>
+<part name="R13" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="100"/>
+<part name="R14" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="22"/>
 </parts>
 <sheets>
 <sheet>
@@ -10700,7 +10699,6 @@ Usable ADC resolution - 12 bit setup: 4095 - 2634 = 1461</text>
 <instance part="X1" gate="LFXTAL069525-32MHZ" x="154.94" y="254"/>
 <instance part="RGB1" gate="150080M153000-RGB-LED" x="-93.98" y="116.84"/>
 <instance part="VDD_10" gate="1" x="-81.28" y="132.08"/>
-<instance part="GND18" gate="1" x="-160.02" y="119.38"/>
 <instance part="R10" gate="G$1" x="-134.62" y="124.46"/>
 <instance part="R13" gate="G$1" x="-134.62" y="142.24"/>
 <instance part="R14" gate="G$1" x="-134.62" y="91.44"/>
@@ -10914,10 +10912,6 @@ Usable ADC resolution - 12 bit setup: 4095 - 2634 = 1461</text>
 <pinref part="GND9" gate="1" pin="GND"/>
 <wire x1="243.84" y1="337.82" x2="254" y2="337.82" width="0.1524" layer="91"/>
 <wire x1="254" y1="337.82" x2="254" y2="335.28" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="GND18" gate="1" pin="GND"/>
-<wire x1="-160.02" y1="124.46" x2="-160.02" y2="121.92" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="DEC1" class="0">
@@ -11142,6 +11136,11 @@ Usable ADC resolution - 12 bit setup: 4095 - 2634 = 1461</text>
 <label x="35.56" y="233.68" size="1.27" layer="95" rot="R180" xref="yes"/>
 <pinref part="U4" gate="U$1" pin="P0.02/AIN0@04"/>
 </segment>
+<segment>
+<pinref part="R13" gate="G$1" pin="1"/>
+<wire x1="-139.7" y1="142.24" x2="-144.78" y2="142.24" width="0.1524" layer="91"/>
+<label x="-144.78" y="142.24" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
 </net>
 <net name="P0.03" class="0">
 <segment>
@@ -11149,12 +11148,22 @@ Usable ADC resolution - 12 bit setup: 4095 - 2634 = 1461</text>
 <label x="35.56" y="231.14" size="1.27" layer="95" rot="R180" xref="yes"/>
 <pinref part="U4" gate="U$1" pin="P0.03/AIN1@05"/>
 </segment>
+<segment>
+<pinref part="R10" gate="G$1" pin="1"/>
+<wire x1="-139.7" y1="124.46" x2="-144.78" y2="124.46" width="0.1524" layer="91"/>
+<label x="-144.78" y="124.46" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
 </net>
 <net name="P0.04" class="0">
 <segment>
 <wire x1="38.1" y1="228.6" x2="35.56" y2="228.6" width="0.1524" layer="91"/>
 <label x="35.56" y="228.6" size="1.27" layer="95" rot="R180" xref="yes"/>
 <pinref part="U4" gate="U$1" pin="P0.04/AIN2@06"/>
+</segment>
+<segment>
+<pinref part="R14" gate="G$1" pin="1"/>
+<wire x1="-139.7" y1="91.44" x2="-144.78" y2="91.44" width="0.1524" layer="91"/>
+<label x="-144.78" y="91.44" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="P0.05" class="0">
@@ -11747,27 +11756,6 @@ Usable ADC resolution - 12 bit setup: 4095 - 2634 = 1461</text>
 <pinref part="RGB1" gate="150080M153000-RGB-LED" pin="B"/>
 <pinref part="R14" gate="G$1" pin="2"/>
 <wire x1="-121.92" y1="91.44" x2="-129.54" y2="91.44" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$22" class="0">
-<segment>
-<pinref part="R14" gate="G$1" pin="1"/>
-<wire x1="-139.7" y1="91.44" x2="-144.78" y2="91.44" width="0.1524" layer="91"/>
-<label x="-144.78" y="91.44" size="1.778" layer="95" rot="R180" xref="yes"/>
-</segment>
-</net>
-<net name="P0.06" class="0">
-<segment>
-<pinref part="R13" gate="G$1" pin="1"/>
-<wire x1="-139.7" y1="142.24" x2="-144.78" y2="142.24" width="0.1524" layer="91"/>
-<label x="-144.78" y="142.24" size="1.778" layer="95" rot="R180" xref="yes"/>
-</segment>
-</net>
-<net name="N$24" class="0">
-<segment>
-<pinref part="R10" gate="G$1" pin="1"/>
-<wire x1="-139.7" y1="124.46" x2="-144.78" y2="124.46" width="0.1524" layer="91"/>
-<label x="-144.78" y="124.46" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 </nets>
