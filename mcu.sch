@@ -13,11 +13,11 @@
 <layer number="17" name="Pads" color="2" fill="1" visible="no" active="no"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="no" active="no"/>
 <layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="no"/>
-<layer number="20" name="Dimension" color="15" fill="1" visible="no" active="no"/>
-<layer number="21" name="tPlace" color="14" fill="1" visible="no" active="no"/>
-<layer number="22" name="bPlace" color="13" fill="1" visible="no" active="no"/>
-<layer number="23" name="tOrigins" color="14" fill="1" visible="no" active="no"/>
-<layer number="24" name="bOrigins" color="13" fill="1" visible="no" active="no"/>
+<layer number="20" name="Dimension" color="24" fill="1" visible="no" active="no"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="no" active="no"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="no"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="no"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="no"/>
 <layer number="25" name="tNames" color="7" fill="1" visible="no" active="no"/>
 <layer number="26" name="bNames" color="7" fill="1" visible="no" active="no"/>
 <layer number="27" name="tValues" color="7" fill="1" visible="no" active="no"/>
@@ -1296,10 +1296,6 @@ For TI HDC1080 humidity sensor</description>
 <smd name="5" x="1.4" y="0" dx="0.6" dy="0.4" layer="1" roundness="25"/>
 <smd name="4" x="1.4" y="-1" dx="0.6" dy="0.4" layer="1" roundness="25"/>
 <circle x="-2.2" y="1.6" radius="0.14141875" width="0.127" layer="21"/>
-<hole x="0" y="-0.95" drill="0.2"/>
-<hole x="0" y="0.95" drill="0.2"/>
-<hole x="0.5" y="0" drill="0.2"/>
-<hole x="-0.5" y="0" drill="0.2"/>
 <polygon width="0.127" layer="31">
 <vertex x="-0.5" y="1.1"/>
 <vertex x="0.5" y="1.1" curve="-90"/>
@@ -9551,269 +9547,6 @@ http://www.ladyada.net/library/pcb/eaglelibrary.html</description>
 <text x="-2.286" y="2.794" size="0.8128" layer="25" ratio="18">&gt;NAME</text>
 <text x="-2.286" y="-3.556" size="0.4064" layer="27" ratio="10">&gt;VALUE</text>
 </package>
-<package name="2X05_1.27MM_SMT">
-<description>&lt;p&gt;2x05 1.27mm Headers SMT (2.0mm Height)&lt;/p&gt;
-4UConnector: 16846</description>
-<wire x1="-5.27" y1="3.5" x2="5.27" y2="3.5" width="0.2032" layer="21"/>
-<wire x1="5.27" y1="3.5" x2="5.27" y2="-3.5" width="0.2032" layer="21"/>
-<wire x1="5.27" y1="-3.5" x2="1" y2="-3.5" width="0.2032" layer="21"/>
-<wire x1="1" y1="-3.5" x2="-1" y2="-3.5" width="0.2032" layer="21"/>
-<wire x1="-1" y1="-3.5" x2="-5.27" y2="-3.5" width="0.2032" layer="21"/>
-<wire x1="-5.27" y1="-3.5" x2="-5.27" y2="3.5" width="0.2032" layer="21"/>
-<wire x1="-1" y1="-3.5" x2="-1" y2="-4" width="0.2032" layer="21"/>
-<wire x1="-1" y1="-4" x2="1" y2="-4" width="0.2032" layer="21"/>
-<wire x1="1" y1="-4" x2="1" y2="-3.5" width="0.2032" layer="21"/>
-<smd name="2" x="-2.54" y="1.85" dx="0.65" dy="2.6" layer="1"/>
-<smd name="4" x="-1.27" y="1.85" dx="0.65" dy="2.6" layer="1"/>
-<smd name="6" x="0" y="1.85" dx="0.65" dy="2.6" layer="1"/>
-<smd name="8" x="1.27" y="1.85" dx="0.65" dy="2.6" layer="1"/>
-<smd name="10" x="2.54" y="1.85" dx="0.65" dy="2.6" layer="1"/>
-<smd name="1" x="-2.54" y="-1.85" dx="0.65" dy="2.6" layer="1"/>
-<smd name="3" x="-1.27" y="-1.85" dx="0.65" dy="2.6" layer="1"/>
-<smd name="5" x="0" y="-1.85" dx="0.65" dy="2.6" layer="1"/>
-<smd name="7" x="1.27" y="-1.85" dx="0.65" dy="2.6" layer="1"/>
-<smd name="9" x="2.54" y="-1.85" dx="0.65" dy="2.6" layer="1"/>
-<text x="-5.199" y="3.806" size="0.8128" layer="25" ratio="18">&gt;NAME</text>
-<text x="-5.199" y="-4.2465" size="0.4064" layer="27" ratio="10">&gt;VALUE</text>
-<polygon width="0.127" layer="21">
-<vertex x="1.016" y="-3.556"/>
-<vertex x="1.016" y="-3.937"/>
-<vertex x="-1.016" y="-3.937"/>
-<vertex x="-1.016" y="-3.556"/>
-</polygon>
-</package>
-<package name="CORTEXM3_SWD10_MOLEX">
-<description>10 Pin SWD Connector (Cortex M3)
-&lt;p&gt;Note: Small tRestrict polygon's were added to the ground pads to improve solderability when this part is used in combination with a ground pour.  By default, Eagle will product four large bridges to the ground pour significantly increasing the heat distribution on the pads and preventing lead-free solder from reflowing in certain situations.  For more details, see: http://www.microbuilder.eu/Blog/09-12-14/Reducing_Thermals_for_Large_Pads_in_Eagle.aspx&lt;/p&gt;</description>
-<wire x1="2" y1="-3.75" x2="-2" y2="-3.75" width="0.2032" layer="21"/>
-<wire x1="-2" y1="-4.35" x2="-2" y2="-3.75" width="0.2032" layer="21"/>
-<wire x1="2" y1="-4.35" x2="2" y2="-3.75" width="0.2032" layer="21"/>
-<wire x1="-5.5118" y1="-2.3368" x2="-4.6482" y2="-2.3368" width="0.2032" layer="51"/>
-<wire x1="-4.6482" y1="-2.3368" x2="-5.08" y2="-3.175" width="0.2032" layer="51"/>
-<wire x1="-5.08" y1="-3.175" x2="-5.5118" y2="-2.3368" width="0.2032" layer="51"/>
-<wire x1="-5.08" y1="-3.175" x2="-5.08" y2="-2.921" width="0.2032" layer="51"/>
-<wire x1="10.125" y1="4.35" x2="-10.125" y2="4.35" width="0.2032" layer="21"/>
-<wire x1="-10.125" y1="4.35" x2="-10.125" y2="-4.35" width="0.2032" layer="21"/>
-<wire x1="-10.125" y1="-4.35" x2="-2" y2="-4.35" width="0.2032" layer="21"/>
-<wire x1="2" y1="-4.35" x2="10.125" y2="-4.35" width="0.2032" layer="21"/>
-<wire x1="-11.6172" y1="-3.0828" x2="-11.6172" y2="-2.2192" width="0.2032" layer="21"/>
-<wire x1="-11.6172" y1="-2.2192" x2="-10.779" y2="-2.651" width="0.2032" layer="21"/>
-<wire x1="-10.779" y1="-2.651" x2="-11.6172" y2="-3.0828" width="0.2032" layer="21"/>
-<wire x1="-10.779" y1="-2.651" x2="-11.033" y2="-2.651" width="0.2032" layer="21"/>
-<wire x1="10.125" y1="4.35" x2="10.125" y2="-4.35" width="0.2032" layer="21"/>
-<pad name="1" x="-5.08" y="-1.27" drill="1"/>
-<pad name="2" x="-5.08" y="1.27" drill="1" shape="octagon"/>
-<pad name="3" x="-2.54" y="-1.27" drill="1" shape="octagon"/>
-<pad name="4" x="-2.54" y="1.27" drill="1" shape="octagon"/>
-<pad name="5" x="0" y="-1.27" drill="1" shape="octagon"/>
-<pad name="6" x="0" y="1.27" drill="1" shape="octagon"/>
-<pad name="7" x="2.54" y="-1.27" drill="1" shape="octagon"/>
-<pad name="8" x="2.54" y="1.27" drill="1" shape="octagon"/>
-<pad name="9" x="5.08" y="-1.27" drill="1" shape="octagon"/>
-<pad name="10" x="5.08" y="1.27" drill="1" shape="octagon"/>
-<text x="-10.35" y="4.81" size="0.8128" layer="25" ratio="18">&gt;NAME</text>
-<text x="-10.223" y="-5.207" size="0.4064" layer="27" ratio="10">&gt;VALUE</text>
-<text x="-7.25" y="-2" size="1.27" layer="51">1</text>
-<rectangle x1="-5.334" y1="-2.7686" x2="-4.826" y2="-2.5146" layer="51"/>
-<rectangle x1="-5.461" y1="-2.5146" x2="-5.08" y2="-2.3876" layer="51"/>
-<rectangle x1="-5.08" y1="-2.5146" x2="-4.699" y2="-2.3876" layer="51"/>
-<rectangle x1="-5.207" y1="-2.9718" x2="-4.953" y2="-2.7178" layer="51"/>
-<rectangle x1="-11.5664" y1="-2.778" x2="-11.0584" y2="-2.524" layer="21" rot="R90"/>
-<rectangle x1="-11.6934" y1="-2.905" x2="-11.3124" y2="-2.778" layer="21" rot="R90"/>
-<rectangle x1="-11.6934" y1="-2.524" x2="-11.3124" y2="-2.397" layer="21" rot="R90"/>
-<rectangle x1="-11.2362" y1="-2.778" x2="-10.9822" y2="-2.524" layer="21" rot="R90"/>
-<polygon width="0.01" layer="41">
-<vertex x="-2.7916" y="-2.0574"/>
-<vertex x="-2.2916" y="-2.0574"/>
-<vertex x="-2.2916" y="-2.0674"/>
-<vertex x="-2.7916" y="-2.0674"/>
-</polygon>
-<polygon width="0.01" layer="41">
-<vertex x="-3.3274" y="-1.5216"/>
-<vertex x="-3.3274" y="-1.0216"/>
-<vertex x="-3.3174" y="-1.0216"/>
-<vertex x="-3.3174" y="-1.5216"/>
-</polygon>
-<polygon width="0.01" layer="41">
-<vertex x="-1.7526" y="-1.5216"/>
-<vertex x="-1.7526" y="-1.0216"/>
-<vertex x="-1.7426" y="-1.0216"/>
-<vertex x="-1.7426" y="-1.5216"/>
-</polygon>
-<polygon width="0.01" layer="41">
-<vertex x="-0.2516" y="-2.0574"/>
-<vertex x="0.2484" y="-2.0574"/>
-<vertex x="0.2484" y="-2.0674"/>
-<vertex x="-0.2516" y="-2.0674"/>
-</polygon>
-<polygon width="0.01" layer="41">
-<vertex x="-0.7874" y="-1.5216"/>
-<vertex x="-0.7874" y="-1.0216"/>
-<vertex x="-0.7774" y="-1.0216"/>
-<vertex x="-0.7774" y="-1.5216"/>
-</polygon>
-<polygon width="0.01" layer="41">
-<vertex x="0.7874" y="-1.5216"/>
-<vertex x="0.7874" y="-1.0216"/>
-<vertex x="0.7974" y="-1.0216"/>
-<vertex x="0.7974" y="-1.5216"/>
-</polygon>
-<polygon width="0.01" layer="41">
-<vertex x="1.7526" y="-1.4962"/>
-<vertex x="1.7526" y="-0.9962"/>
-<vertex x="1.7626" y="-0.9962"/>
-<vertex x="1.7626" y="-1.4962"/>
-</polygon>
-<polygon width="0.01" layer="41">
-<vertex x="3.3274" y="-1.5216"/>
-<vertex x="3.3274" y="-1.0216"/>
-<vertex x="3.3374" y="-1.0216"/>
-<vertex x="3.3374" y="-1.5216"/>
-</polygon>
-<polygon width="0.01" layer="41">
-<vertex x="2.2884" y="-2.0574"/>
-<vertex x="2.7884" y="-2.0574"/>
-<vertex x="2.7884" y="-2.0674"/>
-<vertex x="2.2884" y="-2.0674"/>
-</polygon>
-<polygon width="0.01" layer="41">
-<vertex x="4.8284" y="-2.0574"/>
-<vertex x="5.3284" y="-2.0574"/>
-<vertex x="5.3284" y="-2.0674"/>
-<vertex x="4.8284" y="-2.0674"/>
-</polygon>
-<polygon width="0.01" layer="41">
-<vertex x="4.2926" y="-1.5216"/>
-<vertex x="4.2926" y="-1.0216"/>
-<vertex x="4.3026" y="-1.0216"/>
-<vertex x="4.3026" y="-1.5216"/>
-</polygon>
-<polygon width="0.01" layer="41">
-<vertex x="5.8674" y="-1.5216"/>
-<vertex x="5.8674" y="-1.0216"/>
-<vertex x="5.8774" y="-1.0216"/>
-<vertex x="5.8774" y="-1.5216"/>
-</polygon>
-<polygon width="0.01" layer="42">
-<vertex x="-3.3182" y="-1.5216"/>
-<vertex x="-3.3182" y="-1.0216"/>
-<vertex x="-3.3282" y="-1.0216"/>
-<vertex x="-3.3282" y="-1.5216"/>
-</polygon>
-<polygon width="0.01" layer="42">
-<vertex x="-2.2884" y="-2.0574"/>
-<vertex x="-2.7884" y="-2.0574"/>
-<vertex x="-2.7884" y="-2.0674"/>
-<vertex x="-2.2884" y="-2.0674"/>
-</polygon>
-<polygon width="0.01" layer="42">
-<vertex x="-1.7474" y="-1.5216"/>
-<vertex x="-1.7474" y="-1.0216"/>
-<vertex x="-1.7574" y="-1.0216"/>
-<vertex x="-1.7574" y="-1.5216"/>
-</polygon>
-<polygon width="0.01" layer="42">
-<vertex x="-0.7826" y="-1.5216"/>
-<vertex x="-0.7826" y="-1.0216"/>
-<vertex x="-0.7926" y="-1.0216"/>
-<vertex x="-0.7926" y="-1.5216"/>
-</polygon>
-<polygon width="0.01" layer="42">
-<vertex x="0.2516" y="-2.0574"/>
-<vertex x="-0.2484" y="-2.0574"/>
-<vertex x="-0.2484" y="-2.0674"/>
-<vertex x="0.2516" y="-2.0674"/>
-</polygon>
-<polygon width="0.01" layer="42">
-<vertex x="0.7926" y="-1.5216"/>
-<vertex x="0.7926" y="-1.0216"/>
-<vertex x="0.7826" y="-1.0216"/>
-<vertex x="0.7826" y="-1.5216"/>
-</polygon>
-<polygon width="0.01" layer="42">
-<vertex x="1.7574" y="-1.4962"/>
-<vertex x="1.7574" y="-0.9962"/>
-<vertex x="1.7474" y="-0.9962"/>
-<vertex x="1.7474" y="-1.4962"/>
-</polygon>
-<polygon width="0.01" layer="42">
-<vertex x="2.7916" y="-2.0574"/>
-<vertex x="2.2916" y="-2.0574"/>
-<vertex x="2.2916" y="-2.0674"/>
-<vertex x="2.7916" y="-2.0674"/>
-</polygon>
-<polygon width="0.01" layer="42">
-<vertex x="3.3326" y="-1.5216"/>
-<vertex x="3.3326" y="-1.0216"/>
-<vertex x="3.3226" y="-1.0216"/>
-<vertex x="3.3226" y="-1.5216"/>
-</polygon>
-<polygon width="0.01" layer="42">
-<vertex x="4.2974" y="-1.5216"/>
-<vertex x="4.2974" y="-1.0216"/>
-<vertex x="4.2874" y="-1.0216"/>
-<vertex x="4.2874" y="-1.5216"/>
-</polygon>
-<polygon width="0.01" layer="42">
-<vertex x="5.3316" y="-2.0574"/>
-<vertex x="4.8316" y="-2.0574"/>
-<vertex x="4.8316" y="-2.0674"/>
-<vertex x="5.3316" y="-2.0674"/>
-</polygon>
-<polygon width="0.01" layer="42">
-<vertex x="5.8726" y="-1.5216"/>
-<vertex x="5.8726" y="-1.0216"/>
-<vertex x="5.8626" y="-1.0216"/>
-<vertex x="5.8626" y="-1.5216"/>
-</polygon>
-</package>
-<package name="JTAG-ARM">
-<description>20 Pin JTAG Connector (ARM7, ARM9)</description>
-<wire x1="-11.8618" y1="-2.3368" x2="-10.9982" y2="-2.3368" width="0.2032" layer="21"/>
-<wire x1="-10.9982" y1="-2.3368" x2="-11.43" y2="-3.175" width="0.2032" layer="21"/>
-<wire x1="-11.43" y1="-3.175" x2="-11.8618" y2="-2.3368" width="0.2032" layer="21"/>
-<wire x1="-11.43" y1="-3.175" x2="-11.43" y2="-2.921" width="0.2032" layer="21"/>
-<wire x1="16.5" y1="4.5" x2="-16.5" y2="4.5" width="0.2032" layer="21"/>
-<wire x1="-16.5" y1="4.5" x2="-16.5" y2="-4.5" width="0.2032" layer="21"/>
-<wire x1="16.5" y1="4.5" x2="16.5" y2="-4.5" width="0.2032" layer="21"/>
-<wire x1="15.7" y1="3.7" x2="-15.7" y2="3.7" width="0.2032" layer="51"/>
-<wire x1="15.7" y1="-3.7" x2="-15.7" y2="-3.7" width="0.2032" layer="51"/>
-<wire x1="-15.7" y1="3.7" x2="-15.7" y2="-3.7" width="0.2032" layer="51"/>
-<wire x1="15.7" y1="3.7" x2="15.7" y2="-3.7" width="0.2032" layer="51"/>
-<wire x1="-16.5" y1="-4.5" x2="-2.25" y2="-4.5" width="0.2032" layer="21"/>
-<wire x1="2.25" y1="-4.5" x2="16.5" y2="-4.5" width="0.2032" layer="21"/>
-<wire x1="-2.25" y1="-3.5" x2="2.25" y2="-3.5" width="0.2032" layer="21"/>
-<wire x1="-2.25" y1="-4.5" x2="-2.25" y2="-3.5" width="0.2032" layer="21"/>
-<wire x1="2.25" y1="-3.5" x2="2.25" y2="-4.5" width="0.2032" layer="21"/>
-<pad name="1" x="-11.43" y="-1.27" drill="1"/>
-<pad name="2" x="-11.43" y="1.27" drill="1" shape="octagon"/>
-<pad name="3" x="-8.89" y="-1.27" drill="1" shape="octagon"/>
-<pad name="4" x="-8.89" y="1.27" drill="1" shape="octagon"/>
-<pad name="5" x="-6.35" y="-1.27" drill="1" shape="octagon"/>
-<pad name="6" x="-6.35" y="1.27" drill="1" shape="octagon"/>
-<pad name="7" x="-3.81" y="-1.27" drill="1" shape="octagon"/>
-<pad name="8" x="-3.81" y="1.27" drill="1" shape="octagon"/>
-<pad name="9" x="-1.27" y="-1.27" drill="1" shape="octagon"/>
-<pad name="10" x="-1.27" y="1.27" drill="1" shape="octagon"/>
-<pad name="11" x="1.27" y="-1.27" drill="1" shape="octagon"/>
-<pad name="12" x="1.27" y="1.27" drill="1" shape="octagon"/>
-<pad name="13" x="3.81" y="-1.27" drill="1" shape="octagon"/>
-<pad name="14" x="3.81" y="1.27" drill="1" shape="octagon"/>
-<pad name="15" x="6.35" y="-1.27" drill="1" shape="octagon"/>
-<pad name="16" x="6.35" y="1.27" drill="1" shape="octagon"/>
-<pad name="17" x="8.89" y="-1.27" drill="1" shape="octagon"/>
-<pad name="18" x="8.89" y="1.27" drill="1" shape="octagon"/>
-<pad name="19" x="11.43" y="-1.27" drill="1" shape="octagon"/>
-<pad name="20" x="11.43" y="1.27" drill="1" shape="octagon"/>
-<text x="-16.256" y="5.08" size="0.8128" layer="25" ratio="18">&gt;NAME</text>
-<text x="-13.843" y="-1.905" size="1.524" layer="21" ratio="10">1</text>
-<text x="-3.175" y="-3.429" size="1.27" layer="51" ratio="10">JTAG</text>
-<text x="-16.51" y="-5.842" size="0.4064" layer="27" ratio="10">&gt;VALUE</text>
-<rectangle x1="-11.684" y1="-2.7686" x2="-11.176" y2="-2.5146" layer="21"/>
-<rectangle x1="-11.811" y1="-2.5146" x2="-11.43" y2="-2.3876" layer="21"/>
-<rectangle x1="-11.43" y1="-2.5146" x2="-11.049" y2="-2.3876" layer="21"/>
-<rectangle x1="-11.557" y1="-2.9718" x2="-11.303" y2="-2.7178" layer="21"/>
-</package>
 <package name="TESTPOINT_SMT">
 <description>Surface Mount Test Point - Compact SMT</description>
 <wire x1="-2.75" y1="2" x2="2.75" y2="2" width="0.2032" layer="21"/>
@@ -10049,44 +9782,6 @@ http://www.ladyada.net/library/pcb/eaglelibrary.html</description>
 <pin name="S1" x="5.08" y="-2.54" visible="pad" length="short" direction="pas" swaplevel="1" rot="R180"/>
 <pin name="P1" x="-5.08" y="-2.54" visible="pad" length="short" direction="pas" swaplevel="2"/>
 </symbol>
-<symbol name="JTAG-CORTEXM3">
-<wire x1="-6.35" y1="12.7" x2="6.35" y2="12.7" width="0.4064" layer="94"/>
-<wire x1="6.35" y1="-2.54" x2="6.35" y2="12.7" width="0.4064" layer="94"/>
-<wire x1="6.35" y1="-2.54" x2="-6.35" y2="-2.54" width="0.4064" layer="94"/>
-<wire x1="-6.35" y1="12.7" x2="-6.35" y2="-2.54" width="0.4064" layer="94"/>
-<circle x="-4.445" y="10.16" radius="0.635" width="0.254" layer="94"/>
-<circle x="-4.445" y="7.62" radius="0.635" width="0.254" layer="94"/>
-<circle x="-4.445" y="5.08" radius="0.635" width="0.254" layer="94"/>
-<circle x="-4.445" y="2.54" radius="0.635" width="0.254" layer="94"/>
-<circle x="-4.445" y="0" radius="0.635" width="0.254" layer="94"/>
-<circle x="4.445" y="10.16" radius="0.635" width="0.254" layer="94"/>
-<circle x="4.445" y="7.62" radius="0.635" width="0.254" layer="94"/>
-<circle x="4.445" y="5.08" radius="0.635" width="0.254" layer="94"/>
-<circle x="4.445" y="2.54" radius="0.635" width="0.254" layer="94"/>
-<circle x="4.445" y="0" radius="0.635" width="0.254" layer="94"/>
-<text x="-6.35" y="13.335" size="1.27" layer="95">&gt;NAME</text>
-<text x="1.524" y="0.762" size="0.635" layer="95">nRESET</text>
-<text x="1.778" y="3.302" size="0.635" layer="95">NC/TDI</text>
-<text x="1.016" y="5.842" size="0.635" layer="95">SWO/TDO</text>
-<text x="-0.762" y="8.382" size="0.635" layer="95">SWDCLK/TCK</text>
-<text x="0" y="10.922" size="0.635" layer="95">SWDIO/TMS</text>
-<text x="-5.588" y="11.176" size="0.635" layer="95">VCC</text>
-<text x="-5.588" y="8.382" size="0.635" layer="95">GND</text>
-<text x="-5.588" y="5.842" size="0.635" layer="95">GND</text>
-<text x="-5.588" y="3.302" size="0.635" layer="95">KEY</text>
-<text x="-5.588" y="0.762" size="0.635" layer="95">GNDDetect</text>
-<text x="-6.35" y="-4.445" size="1.27" layer="96">&gt;VALUE</text>
-<pin name="1" x="-10.16" y="10.16" visible="pad" length="middle" direction="pas" swaplevel="1"/>
-<pin name="2" x="10.16" y="10.16" visible="pad" length="middle" direction="pas" swaplevel="1" rot="R180"/>
-<pin name="3" x="-10.16" y="7.62" visible="pad" length="middle" direction="pas" swaplevel="1"/>
-<pin name="4" x="10.16" y="7.62" visible="pad" length="middle" direction="pas" swaplevel="1" rot="R180"/>
-<pin name="5" x="-10.16" y="5.08" visible="pad" length="middle" direction="pas" swaplevel="1"/>
-<pin name="6" x="10.16" y="5.08" visible="pad" length="middle" direction="pas" swaplevel="1" rot="R180"/>
-<pin name="7" x="-10.16" y="2.54" visible="pad" length="middle" direction="pas" swaplevel="1"/>
-<pin name="8" x="10.16" y="2.54" visible="pad" length="middle" direction="pas" swaplevel="1" rot="R180"/>
-<pin name="9" x="-10.16" y="0" visible="pad" length="middle" direction="pas" swaplevel="1"/>
-<pin name="10" x="10.16" y="0" visible="pad" length="middle" direction="pas" swaplevel="1" rot="R180"/>
-</symbol>
 <symbol name="TESTPOINT">
 <circle x="0" y="3.81" radius="1.27" width="0.254" layer="94"/>
 <text x="-2.54" y="7.62" size="1.27" layer="95">&gt;NAME</text>
@@ -10190,70 +9885,6 @@ http://www.ladyada.net/library/pcb/eaglelibrary.html</description>
 <connect gate="G$1" pin="P1" pad="C"/>
 <connect gate="G$1" pin="S" pad="B"/>
 <connect gate="G$1" pin="S1" pad="D"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="JTAG-CORTEXM3" prefix="JTAG" uservalue="yes">
-<description>&lt;p&gt;&lt;b&gt;Serial Wire (SW-DP) Connector&lt;/b&gt;&lt;/p&gt;
-This standard 0.05" 10-pin connector is for use with the Cortex M0/M3's native SWD (serial wire debugger) interface (SW-DP).  Some boards support a 20-pin combined JTAG+SWD connector (SWJ-DP), such as the LPC1700 family, but many smaller devices only work with SWD which typically use the smaller 10-pin SW-DP connecter (the LPC1300 family, for example, only supports SWD).
-&lt;p&gt;&lt;b&gt;2x05 1.27mm/0.05" Connector:&lt;/b&gt; This is the standard SMT connector defined by ARM for all Cortex devices, and should be used in most situations and for forward-compatibility since any new devices coming to market will likely use this connector.&lt;/p&gt;
-&lt;p&gt;&lt;b&gt;MOLEX 10 Pin 0.1" Connector:&lt;/b&gt; This 0.1" 10 pin connector has the same pin layout as the standard 0.05" connector, but is easier to work with if you are using standard jumper wires or custom cables to connect your SWD hardware.&lt;/p&gt;
-&lt;p&gt;&lt;b&gt;MOLEX 20 Pin 0.1" Connector:&lt;/b&gt; This 0.1" 20 pin connector is the same model used for ARM7/ARM9 JTAG debuggers, but is connected to match the pins on the Segger J-Link for ARM (which supports both JTAG and SWD debugging).&lt;/p&gt;
-&lt;p&gt;See the following document from ARM for more information on Cortex M3 Debug Connectors: http://infocenter.arm.com/help/topic/com.arm.doc.faqs/attached/13634/cortex_debug_connectors.pdf&lt;br/&gt;And the following page for an overview with images of the different connector types: http://www.keil.com/peripherals/coresight/connectors.asp&lt;/p&gt;</description>
-<gates>
-<gate name="G$1" symbol="JTAG-CORTEXM3" x="0" y="-5.08"/>
-</gates>
-<devices>
-<device name="" package="2X05_1.27MM_SMT">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="10" pad="10"/>
-<connect gate="G$1" pin="2" pad="2"/>
-<connect gate="G$1" pin="3" pad="3"/>
-<connect gate="G$1" pin="4" pad="4"/>
-<connect gate="G$1" pin="5" pad="5"/>
-<connect gate="G$1" pin="6" pad="6"/>
-<connect gate="G$1" pin="7" pad="7"/>
-<connect gate="G$1" pin="8" pad="8"/>
-<connect gate="G$1" pin="9" pad="9"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="MOLEX" package="CORTEXM3_SWD10_MOLEX">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="10" pad="10"/>
-<connect gate="G$1" pin="2" pad="2"/>
-<connect gate="G$1" pin="3" pad="3"/>
-<connect gate="G$1" pin="4" pad="4"/>
-<connect gate="G$1" pin="5" pad="5"/>
-<connect gate="G$1" pin="6" pad="6"/>
-<connect gate="G$1" pin="7" pad="7"/>
-<connect gate="G$1" pin="8" pad="8"/>
-<connect gate="G$1" pin="9" pad="9"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="MOLEX20" package="JTAG-ARM">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="10" pad="15"/>
-<connect gate="G$1" pin="2" pad="7"/>
-<connect gate="G$1" pin="3" pad="4"/>
-<connect gate="G$1" pin="4" pad="9"/>
-<connect gate="G$1" pin="5" pad="6"/>
-<connect gate="G$1" pin="6" pad="13"/>
-<connect gate="G$1" pin="7" pad="10"/>
-<connect gate="G$1" pin="8" pad="17"/>
-<connect gate="G$1" pin="9" pad="8"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -10515,9 +10146,6 @@ This standard 0.05" 10-pin connector is for use with the Cortex M0/M3's native S
 <part name="SJ1" library="microbuilder" deviceset="SOLDERJUMPER_CLOSED" device=""/>
 <part name="B1" library="microbuilder" deviceset="SWITCH_TACT_SMT" device="4.6X2.8"/>
 <part name="GND11" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="JTAG1" library="microbuilder" deviceset="JTAG-CORTEXM3" device=""/>
-<part name="GND12" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="VDD_8" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="V+" device="" value="3.3V"/>
 <part name="FRST" library="microbuilder" deviceset="TESTPOINT" device="ROUND2MM"/>
 <part name="DFU" library="microbuilder" deviceset="TESTPOINT" device="ROUND2MM"/>
 <part name="GND13" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
@@ -10554,6 +10182,12 @@ This standard 0.05" 10-pin connector is for use with the Cortex M0/M3's native S
 <part name="R14" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="22"/>
 <part name="C10" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603K" package3d_urn="urn:adsk.eagle:package:23680/2" value="0.1µF"/>
 <part name="GND18" library="supply1" deviceset="GND" device=""/>
+<part name="SWDCLK" library="microbuilder" deviceset="TESTPOINT" device="ROUND2MM"/>
+<part name="SWDIO" library="microbuilder" deviceset="TESTPOINT" device="ROUND2MM"/>
+<part name="GND" library="microbuilder" deviceset="TESTPOINT" device="ROUND2MM"/>
+<part name="VDD" library="microbuilder" deviceset="TESTPOINT" device="ROUND2MM"/>
+<part name="SWO" library="microbuilder" deviceset="TESTPOINT" device="ROUND2MM"/>
+<part name="VDD_11" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="V+" device="" value="3.3V"/>
 </parts>
 <sheets>
 <sheet>
@@ -10570,8 +10204,7 @@ This standard 0.05" 10-pin connector is for use with the Cortex M0/M3's native S
 FRST / P0.22 = if GND at startup factory reset and reboot into bootloader</text>
 <text x="208.28" y="259.08" size="1.778" layer="91">Auto reset from USB signal</text>
 <text x="195.58" y="220.98" size="1.778" layer="91">Reset button</text>
-<text x="205.74" y="195.58" size="1.778" layer="91">Check what available</text>
-<text x="254" y="198.12" size="1.778" layer="91">Testpoints</text>
+<text x="259.08" y="215.9" size="1.778" layer="91">Testpoints</text>
 <text x="121.92" y="368.3" size="1.778" layer="97">10K  = 100mA</text>
 <text x="121.92" y="365.76" size="1.778" layer="97">5.0K  = 200mA</text>
 <text x="121.92" y="363.22" size="1.778" layer="97">2.0K  = 500mA</text>
@@ -10667,11 +10300,8 @@ Usable ADC resolution - 12 bit setup: 4095 - 2634 = 1461</text>
 <instance part="SJ1" gate="G$1" x="218.44" y="241.3"/>
 <instance part="B1" gate="G$1" x="213.36" y="213.36"/>
 <instance part="GND11" gate="1" x="226.06" y="205.74"/>
-<instance part="JTAG1" gate="G$1" x="205.74" y="180.34"/>
-<instance part="GND12" gate="1" x="190.5" y="172.72"/>
-<instance part="VDD_8" gate="1" x="190.5" y="198.12"/>
-<instance part="FRST" gate="G$1" x="259.08" y="182.88" rot="R180"/>
-<instance part="DFU" gate="G$1" x="264.16" y="182.88" rot="R180"/>
+<instance part="FRST" gate="G$1" x="259.08" y="182.88" rot="R90"/>
+<instance part="DFU" gate="G$1" x="259.08" y="175.26" rot="R90"/>
 <instance part="GND13" gate="1" x="-177.8" y="198.12"/>
 <instance part="U$10" gate="G$1" x="-58.42" y="274.32"/>
 <instance part="C7" gate="G$1" x="-58.42" y="223.52"/>
@@ -10706,6 +10336,12 @@ Usable ADC resolution - 12 bit setup: 4095 - 2634 = 1461</text>
 <instance part="R14" gate="G$1" x="-134.62" y="91.44"/>
 <instance part="C10" gate="G$1" x="40.64" y="99.06"/>
 <instance part="GND18" gate="1" x="40.64" y="88.9" rot="MR0"/>
+<instance part="SWDCLK" gate="G$1" x="259.08" y="190.5" rot="R90"/>
+<instance part="SWDIO" gate="G$1" x="259.08" y="200.66" rot="R90"/>
+<instance part="GND" gate="G$1" x="259.08" y="167.64" rot="R90"/>
+<instance part="VDD" gate="G$1" x="259.08" y="160.02" rot="R90"/>
+<instance part="SWO" gate="G$1" x="259.08" y="208.28" rot="R90"/>
+<instance part="VDD_11" gate="1" x="274.32" y="162.56"/>
 </instances>
 <busses>
 </busses>
@@ -10825,24 +10461,6 @@ Usable ADC resolution - 12 bit setup: 4095 - 2634 = 1461</text>
 <wire x1="226.06" y1="210.82" x2="226.06" y2="208.28" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="JTAG1" gate="G$1" pin="3"/>
-<wire x1="195.58" y1="187.96" x2="190.5" y2="187.96" width="0.1524" layer="91"/>
-<pinref part="GND12" gate="1" pin="GND"/>
-<wire x1="190.5" y1="187.96" x2="190.5" y2="185.42" width="0.1524" layer="91"/>
-<pinref part="JTAG1" gate="G$1" pin="5"/>
-<wire x1="190.5" y1="185.42" x2="190.5" y2="182.88" width="0.1524" layer="91"/>
-<wire x1="190.5" y1="182.88" x2="190.5" y2="180.34" width="0.1524" layer="91"/>
-<wire x1="190.5" y1="180.34" x2="190.5" y2="175.26" width="0.1524" layer="91"/>
-<wire x1="195.58" y1="185.42" x2="190.5" y2="185.42" width="0.1524" layer="91"/>
-<junction x="190.5" y="185.42"/>
-<pinref part="JTAG1" gate="G$1" pin="7"/>
-<wire x1="195.58" y1="182.88" x2="190.5" y2="182.88" width="0.1524" layer="91"/>
-<junction x="190.5" y="182.88"/>
-<pinref part="JTAG1" gate="G$1" pin="9"/>
-<wire x1="195.58" y1="180.34" x2="190.5" y2="180.34" width="0.1524" layer="91"/>
-<junction x="190.5" y="180.34"/>
-</segment>
-<segment>
 <pinref part="GND13" gate="1" pin="GND"/>
 <pinref part="R8" gate="G$1" pin="2"/>
 <wire x1="-177.8" y1="228.6" x2="-177.8" y2="208.28" width="0.1524" layer="91"/>
@@ -10922,6 +10540,11 @@ Usable ADC resolution - 12 bit setup: 4095 - 2634 = 1461</text>
 <pinref part="GND18" gate="1" pin="GND"/>
 <wire x1="40.64" y1="93.98" x2="40.64" y2="91.44" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="GND" gate="G$1" pin="P$1"/>
+<wire x1="259.08" y1="167.64" x2="261.62" y2="167.64" width="0.1524" layer="91"/>
+<label x="261.62" y="167.64" size="1.778" layer="95" xref="yes"/>
+</segment>
 </net>
 <net name="DEC1" class="0">
 <segment>
@@ -10977,10 +10600,9 @@ Usable ADC resolution - 12 bit setup: 4095 - 2634 = 1461</text>
 <pinref part="U4" gate="U$1" pin="SWDIO@26"/>
 </segment>
 <segment>
-<pinref part="JTAG1" gate="G$1" pin="2"/>
-<label x="220.98" y="193.04" size="1.778" layer="95" xref="yes"/>
-<wire x1="215.9" y1="190.5" x2="218.44" y2="193.04" width="0.1524" layer="91"/>
-<wire x1="218.44" y1="193.04" x2="220.98" y2="193.04" width="0.1524" layer="91"/>
+<pinref part="SWDIO" gate="G$1" pin="P$1"/>
+<wire x1="259.08" y1="200.66" x2="261.62" y2="200.66" width="0.1524" layer="91"/>
+<label x="261.62" y="200.66" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="SWDCLK" class="0">
@@ -10990,9 +10612,9 @@ Usable ADC resolution - 12 bit setup: 4095 - 2634 = 1461</text>
 <pinref part="U4" gate="U$1" pin="SWDCLK@25"/>
 </segment>
 <segment>
-<pinref part="JTAG1" gate="G$1" pin="4"/>
-<wire x1="215.9" y1="187.96" x2="220.98" y2="187.96" width="0.1524" layer="91"/>
-<label x="220.98" y="187.96" size="1.778" layer="95" xref="yes"/>
+<pinref part="SWDCLK" gate="G$1" pin="P$1"/>
+<wire x1="259.08" y1="190.5" x2="261.62" y2="190.5" width="0.1524" layer="91"/>
+<label x="261.62" y="190.5" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="N$8" class="0">
@@ -11134,9 +10756,8 @@ Usable ADC resolution - 12 bit setup: 4095 - 2634 = 1461</text>
 </segment>
 <segment>
 <pinref part="FRST" gate="G$1" pin="P$1"/>
-<wire x1="259.08" y1="182.88" x2="259.08" y2="187.96" width="0.1524" layer="91"/>
-<wire x1="259.08" y1="187.96" x2="256.54" y2="187.96" width="0.1524" layer="91"/>
-<label x="256.54" y="187.96" size="1.778" layer="95" rot="R180" xref="yes"/>
+<wire x1="259.08" y1="182.88" x2="261.62" y2="182.88" width="0.1524" layer="91"/>
+<label x="261.62" y="182.88" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="P0.02" class="0">
@@ -11278,10 +10899,9 @@ Usable ADC resolution - 12 bit setup: 4095 - 2634 = 1461</text>
 <pinref part="U4" gate="U$1" pin="P0.18/SWO@21"/>
 </segment>
 <segment>
-<pinref part="JTAG1" gate="G$1" pin="6"/>
-<label x="220.98" y="182.88" size="1.778" layer="95" xref="yes"/>
-<wire x1="215.9" y1="185.42" x2="218.44" y2="182.88" width="0.1524" layer="91"/>
-<wire x1="218.44" y1="182.88" x2="220.98" y2="182.88" width="0.1524" layer="91"/>
+<pinref part="SWO" gate="G$1" pin="P$1"/>
+<wire x1="259.08" y1="208.28" x2="261.62" y2="208.28" width="0.1524" layer="91"/>
+<label x="261.62" y="208.28" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="P0.19" class="0">
@@ -11299,9 +10919,8 @@ Usable ADC resolution - 12 bit setup: 4095 - 2634 = 1461</text>
 </segment>
 <segment>
 <pinref part="DFU" gate="G$1" pin="P$1"/>
-<wire x1="264.16" y1="182.88" x2="264.16" y2="187.96" width="0.1524" layer="91"/>
-<wire x1="264.16" y1="187.96" x2="266.7" y2="187.96" width="0.1524" layer="91"/>
-<label x="266.7" y="187.96" size="1.778" layer="95" xref="yes"/>
+<wire x1="259.08" y1="175.26" x2="261.62" y2="175.26" width="0.1524" layer="91"/>
+<label x="261.62" y="175.26" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="P0.21/RESET" class="0">
@@ -11330,12 +10949,6 @@ Usable ADC resolution - 12 bit setup: 4095 - 2634 = 1461</text>
 <wire x1="208.28" y1="210.82" x2="203.2" y2="210.82" width="0.1524" layer="91"/>
 <junction x="208.28" y="210.82"/>
 <label x="203.2" y="210.82" size="1.778" layer="95" rot="R180" xref="yes"/>
-</segment>
-<segment>
-<pinref part="JTAG1" gate="G$1" pin="10"/>
-<label x="220.98" y="177.8" size="1.778" layer="95" xref="yes"/>
-<wire x1="215.9" y1="180.34" x2="218.44" y2="177.8" width="0.1524" layer="91"/>
-<wire x1="218.44" y1="177.8" x2="220.98" y2="177.8" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$9" class="0">
@@ -11479,12 +11092,6 @@ Usable ADC resolution - 12 bit setup: 4095 - 2634 = 1461</text>
 <junction x="241.3" y="248.92"/>
 </segment>
 <segment>
-<pinref part="VDD_8" gate="1" pin="V+"/>
-<wire x1="190.5" y1="195.58" x2="190.5" y2="190.5" width="0.1524" layer="91"/>
-<pinref part="JTAG1" gate="G$1" pin="1"/>
-<wire x1="190.5" y1="190.5" x2="195.58" y2="190.5" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="VDD_9" gate="1" pin="V+"/>
 <wire x1="48.26" y1="154.94" x2="48.26" y2="160.02" width="0.1524" layer="91"/>
 <wire x1="35.56" y1="154.94" x2="48.26" y2="154.94" width="0.1524" layer="91"/>
@@ -11514,6 +11121,11 @@ Usable ADC resolution - 12 bit setup: 4095 - 2634 = 1461</text>
 <pinref part="VDD_10" gate="1" pin="V+"/>
 <wire x1="-88.9" y1="124.46" x2="-81.28" y2="124.46" width="0.1524" layer="91"/>
 <wire x1="-81.28" y1="124.46" x2="-81.28" y2="129.54" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="VDD" gate="G$1" pin="P$1"/>
+<pinref part="VDD_11" gate="1" pin="V+"/>
+<wire x1="259.08" y1="160.02" x2="274.32" y2="160.02" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$1" class="0">
