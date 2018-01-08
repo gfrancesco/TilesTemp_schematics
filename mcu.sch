@@ -10552,6 +10552,8 @@ This standard 0.05" 10-pin connector is for use with the Cortex M0/M3's native S
 <part name="R10" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="22"/>
 <part name="R13" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="100"/>
 <part name="R14" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="22"/>
+<part name="C10" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603K" package3d_urn="urn:adsk.eagle:package:23680/2" value="0.1µF"/>
+<part name="GND18" library="supply1" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -10683,12 +10685,12 @@ Usable ADC resolution - 12 bit setup: 4095 - 2634 = 1461</text>
 <instance part="GND10" gate="1" x="157.48" y="205.74" rot="MR0"/>
 <instance part="F1" gate="2450FM07A0029" x="137.16" y="220.98"/>
 <instance part="T1" gate="SI7051-A20" x="10.16" y="137.16"/>
-<instance part="C8" gate="G$1" x="55.88" y="149.86"/>
+<instance part="C8" gate="G$1" x="40.64" y="129.54"/>
 <instance part="VDD_9" gate="1" x="48.26" y="162.56"/>
 <instance part="GND14" gate="1" x="-7.62" y="127" rot="MR0"/>
 <instance part="H1" gate="HDC1080" x="10.16" y="104.14"/>
 <instance part="GND15" gate="1" x="-7.62" y="91.44" rot="MR0"/>
-<instance part="GND16" gate="1" x="55.88" y="139.7" rot="MR0"/>
+<instance part="GND16" gate="1" x="40.64" y="119.38" rot="MR0"/>
 <instance part="U$9" gate="G$1" x="160.02" y="124.46"/>
 <instance part="GND17" gate="1" x="160.02" y="81.28"/>
 <instance part="C9" gate="G$1" x="144.78" y="91.44" rot="R180"/>
@@ -10702,6 +10704,8 @@ Usable ADC resolution - 12 bit setup: 4095 - 2634 = 1461</text>
 <instance part="R10" gate="G$1" x="-134.62" y="124.46"/>
 <instance part="R13" gate="G$1" x="-134.62" y="142.24"/>
 <instance part="R14" gate="G$1" x="-134.62" y="91.44"/>
+<instance part="C10" gate="G$1" x="40.64" y="99.06"/>
+<instance part="GND18" gate="1" x="40.64" y="88.9" rot="MR0"/>
 </instances>
 <busses>
 </busses>
@@ -10878,7 +10882,7 @@ Usable ADC resolution - 12 bit setup: 4095 - 2634 = 1461</text>
 <segment>
 <pinref part="C8" gate="G$1" pin="2"/>
 <pinref part="GND16" gate="1" pin="GND"/>
-<wire x1="55.88" y1="144.78" x2="55.88" y2="142.24" width="0.1524" layer="91"/>
+<wire x1="40.64" y1="124.46" x2="40.64" y2="121.92" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="GND17" gate="1" pin="GND"/>
@@ -10912,6 +10916,11 @@ Usable ADC resolution - 12 bit setup: 4095 - 2634 = 1461</text>
 <pinref part="GND9" gate="1" pin="GND"/>
 <wire x1="243.84" y1="337.82" x2="254" y2="337.82" width="0.1524" layer="91"/>
 <wire x1="254" y1="337.82" x2="254" y2="335.28" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="C10" gate="G$1" pin="2"/>
+<pinref part="GND18" gate="1" pin="GND"/>
+<wire x1="40.64" y1="93.98" x2="40.64" y2="91.44" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="DEC1" class="0">
@@ -11478,22 +11487,27 @@ Usable ADC resolution - 12 bit setup: 4095 - 2634 = 1461</text>
 <segment>
 <pinref part="VDD_9" gate="1" pin="V+"/>
 <wire x1="48.26" y1="154.94" x2="48.26" y2="160.02" width="0.1524" layer="91"/>
-<wire x1="-17.78" y1="154.94" x2="35.56" y2="154.94" width="0.1524" layer="91"/>
-<pinref part="T1" gate="SI7051-A20" pin="VDD"/>
 <wire x1="35.56" y1="154.94" x2="48.26" y2="154.94" width="0.1524" layer="91"/>
-<wire x1="25.4" y1="137.16" x2="48.26" y2="137.16" width="0.1524" layer="91"/>
-<wire x1="48.26" y1="137.16" x2="48.26" y2="154.94" width="0.1524" layer="91"/>
-<junction x="48.26" y="154.94"/>
-<pinref part="H1" gate="HDC1080" pin="VDD"/>
-<wire x1="25.4" y1="104.14" x2="48.26" y2="104.14" width="0.1524" layer="91"/>
-<wire x1="48.26" y1="137.16" x2="48.26" y2="104.14" width="0.1524" layer="91"/>
-<junction x="48.26" y="137.16"/>
-<pinref part="C8" gate="G$1" pin="1"/>
-<wire x1="48.26" y1="154.94" x2="55.88" y2="154.94" width="0.1524" layer="91"/>
-<wire x1="55.88" y1="154.94" x2="55.88" y2="152.4" width="0.1524" layer="91"/>
 <pinref part="R9" gate="G$1" pin="2"/>
 <junction x="35.56" y="154.94"/>
+<wire x1="-17.78" y1="154.94" x2="35.56" y2="154.94" width="0.1524" layer="91"/>
 <pinref part="R15" gate="G$1" pin="2"/>
+<pinref part="T1" gate="SI7051-A20" pin="VDD"/>
+<wire x1="25.4" y1="137.16" x2="40.64" y2="137.16" width="0.1524" layer="91"/>
+<pinref part="H1" gate="HDC1080" pin="VDD"/>
+<wire x1="40.64" y1="137.16" x2="48.26" y2="137.16" width="0.1524" layer="91"/>
+<wire x1="25.4" y1="104.14" x2="40.64" y2="104.14" width="0.1524" layer="91"/>
+<wire x1="40.64" y1="104.14" x2="48.26" y2="104.14" width="0.1524" layer="91"/>
+<wire x1="48.26" y1="137.16" x2="48.26" y2="104.14" width="0.1524" layer="91"/>
+<wire x1="48.26" y1="154.94" x2="48.26" y2="137.16" width="0.1524" layer="91"/>
+<junction x="48.26" y="154.94"/>
+<junction x="48.26" y="137.16"/>
+<pinref part="C8" gate="G$1" pin="1"/>
+<wire x1="40.64" y1="137.16" x2="40.64" y2="132.08" width="0.1524" layer="91"/>
+<junction x="40.64" y="137.16"/>
+<pinref part="C10" gate="G$1" pin="1"/>
+<wire x1="40.64" y1="101.6" x2="40.64" y2="104.14" width="0.1524" layer="91"/>
+<junction x="40.64" y="104.14"/>
 </segment>
 <segment>
 <pinref part="RGB1" gate="150080M153000-RGB-LED" pin="VDD"/>
@@ -11777,6 +11791,7 @@ Usable ADC resolution - 12 bit setup: 4095 - 2634 = 1461</text>
 <approved hash="208,1,241.3,256.54,V+,sup,,,,"/>
 <approved hash="208,1,190.5,195.58,V+,sup,,,,"/>
 <approved hash="208,1,48.26,160.02,V+,sup,,,,"/>
+<approved hash="208,1,-81.28,129.54,V+,sup,,,,"/>
 </errors>
 </schematic>
 </drawing>
