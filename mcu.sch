@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.5.1">
+<eagle version="8.5.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -10185,9 +10185,11 @@ http://www.ladyada.net/library/pcb/eaglelibrary.html</description>
 <part name="SWDCLK" library="microbuilder" deviceset="TESTPOINT" device="ROUND2MM"/>
 <part name="SWDIO" library="microbuilder" deviceset="TESTPOINT" device="ROUND2MM"/>
 <part name="GND" library="microbuilder" deviceset="TESTPOINT" device="ROUND2MM"/>
-<part name="VDD" library="microbuilder" deviceset="TESTPOINT" device="ROUND2MM"/>
 <part name="SWO" library="microbuilder" deviceset="TESTPOINT" device="ROUND2MM"/>
-<part name="VDD_11" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="V+" device="" value="3.3V"/>
+<part name="GND12" library="supply1" deviceset="GND" device=""/>
+<part name="R16" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/2" value="0"/>
+<part name="R17" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/2" value="DNP"/>
+<part name="R18" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/2" value="DNP"/>
 </parts>
 <sheets>
 <sheet>
@@ -10311,7 +10313,7 @@ Usable ADC resolution - 12 bit setup: 4095 - 2634 = 1461</text>
 <instance part="DSG" gate="CSD16406Q3" x="-134.62" y="210.82" rot="MR270"/>
 <instance part="U12" gate="BQ297XY" x="-96.52" y="233.68"/>
 <instance part="U$14" gate="G$1" x="-40.64" y="233.68" rot="R90"/>
-<instance part="ANT1" gate="2450AT45A100" x="210.82" y="149.86"/>
+<instance part="ANT1" gate="2450AT45A100" x="233.68" y="142.24"/>
 <instance part="GND10" gate="1" x="157.48" y="205.74" rot="MR0"/>
 <instance part="F1" gate="2450FM07A0029" x="137.16" y="220.98"/>
 <instance part="T1" gate="SI7051-A20" x="10.16" y="137.16"/>
@@ -10339,9 +10341,11 @@ Usable ADC resolution - 12 bit setup: 4095 - 2634 = 1461</text>
 <instance part="SWDCLK" gate="G$1" x="259.08" y="190.5" rot="R90"/>
 <instance part="SWDIO" gate="G$1" x="259.08" y="200.66" rot="R90"/>
 <instance part="GND" gate="G$1" x="259.08" y="167.64" rot="R90"/>
-<instance part="VDD" gate="G$1" x="259.08" y="160.02" rot="R90"/>
 <instance part="SWO" gate="G$1" x="259.08" y="208.28" rot="R90"/>
-<instance part="VDD_11" gate="1" x="274.32" y="162.56"/>
+<instance part="GND12" gate="1" x="213.36" y="116.84"/>
+<instance part="R16" gate="G$1" x="210.82" y="139.7"/>
+<instance part="R17" gate="G$1" x="220.98" y="129.54" rot="R90"/>
+<instance part="R18" gate="G$1" x="203.2" y="129.54" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -10544,6 +10548,17 @@ Usable ADC resolution - 12 bit setup: 4095 - 2634 = 1461</text>
 <pinref part="GND" gate="G$1" pin="P$1"/>
 <wire x1="259.08" y1="167.64" x2="261.62" y2="167.64" width="0.1524" layer="91"/>
 <label x="261.62" y="167.64" size="1.778" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="R18" gate="G$1" pin="1"/>
+<wire x1="203.2" y1="124.46" x2="203.2" y2="121.92" width="0.1524" layer="91"/>
+<wire x1="203.2" y1="121.92" x2="213.36" y2="121.92" width="0.1524" layer="91"/>
+<pinref part="R17" gate="G$1" pin="1"/>
+<wire x1="213.36" y1="121.92" x2="220.98" y2="121.92" width="0.1524" layer="91"/>
+<wire x1="220.98" y1="121.92" x2="220.98" y2="124.46" width="0.1524" layer="91"/>
+<pinref part="GND12" gate="1" pin="GND"/>
+<wire x1="213.36" y1="119.38" x2="213.36" y2="121.92" width="0.1524" layer="91"/>
+<junction x="213.36" y="121.92"/>
 </segment>
 </net>
 <net name="DEC1" class="0">
@@ -11006,9 +11021,13 @@ Usable ADC resolution - 12 bit setup: 4095 - 2634 = 1461</text>
 <pinref part="F1" gate="2450FM07A0029" pin="OUT"/>
 </segment>
 <segment>
-<pinref part="ANT1" gate="2450AT45A100" pin="1"/>
-<wire x1="200.66" y1="147.32" x2="193.04" y2="147.32" width="0.1524" layer="91"/>
-<label x="193.04" y="147.32" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="R16" gate="G$1" pin="1"/>
+<wire x1="205.74" y1="139.7" x2="203.2" y2="139.7" width="0.1524" layer="91"/>
+<pinref part="R18" gate="G$1" pin="2"/>
+<wire x1="203.2" y1="139.7" x2="193.04" y2="139.7" width="0.1524" layer="91"/>
+<wire x1="203.2" y1="134.62" x2="203.2" y2="139.7" width="0.1524" layer="91"/>
+<junction x="203.2" y="139.7"/>
+<label x="193.04" y="139.7" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="V+" class="0">
@@ -11121,11 +11140,6 @@ Usable ADC resolution - 12 bit setup: 4095 - 2634 = 1461</text>
 <pinref part="VDD_10" gate="1" pin="V+"/>
 <wire x1="-88.9" y1="124.46" x2="-81.28" y2="124.46" width="0.1524" layer="91"/>
 <wire x1="-81.28" y1="124.46" x2="-81.28" y2="129.54" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="VDD" gate="G$1" pin="P$1"/>
-<pinref part="VDD_11" gate="1" pin="V+"/>
-<wire x1="259.08" y1="160.02" x2="274.32" y2="160.02" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -11382,6 +11396,17 @@ Usable ADC resolution - 12 bit setup: 4095 - 2634 = 1461</text>
 <pinref part="RGB1" gate="150080M153000-RGB-LED" pin="B"/>
 <pinref part="R14" gate="G$1" pin="2"/>
 <wire x1="-121.92" y1="91.44" x2="-129.54" y2="91.44" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$18" class="0">
+<segment>
+<pinref part="ANT1" gate="2450AT45A100" pin="1"/>
+<pinref part="R16" gate="G$1" pin="2"/>
+<wire x1="223.52" y1="139.7" x2="220.98" y2="139.7" width="0.1524" layer="91"/>
+<pinref part="R17" gate="G$1" pin="2"/>
+<wire x1="220.98" y1="139.7" x2="215.9" y2="139.7" width="0.1524" layer="91"/>
+<wire x1="220.98" y1="134.62" x2="220.98" y2="139.7" width="0.1524" layer="91"/>
+<junction x="220.98" y="139.7"/>
 </segment>
 </net>
 </nets>
