@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.5.1">
+<eagle version="8.5.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
 <setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.05" altunitdist="mm" altunit="mm"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="yes" active="yes"/>
@@ -1187,6 +1187,53 @@ From MBR120VLSF, NRVB120VLSF datasheet</description>
 <wire x1="-2.5" y1="0.4" x2="-2" y2="0.4" width="0.127" layer="21"/>
 <wire x1="1.7" y1="0.8" x2="1.7" y2="-0.8" width="0.127" layer="21"/>
 </package>
+<package name="DSBGA-6">
+<smd name="B1" x="-0.5" y="0" dx="0.263" dy="0.263" layer="1" roundness="100"/>
+<smd name="B2" x="0.5" y="0" dx="0.263" dy="0.263" layer="1" roundness="100"/>
+<smd name="A2" x="0.5" y="0.5" dx="0.263" dy="0.263" layer="1" roundness="100"/>
+<smd name="A1" x="-0.5" y="0.5" dx="0.263" dy="0.263" layer="1" roundness="100"/>
+<smd name="C1" x="-0.5" y="-0.5" dx="0.263" dy="0.263" layer="1" roundness="100"/>
+<smd name="C2" x="0.5" y="-0.5" dx="0.263" dy="0.263" layer="1" roundness="100"/>
+<wire x1="-0.75" y1="-0.75" x2="-0.75" y2="0.75" width="0.0762" layer="21"/>
+<wire x1="-0.75" y1="0.75" x2="0.75" y2="0.75" width="0.0762" layer="21"/>
+<wire x1="0.75" y1="0.75" x2="0.75" y2="-0.75" width="0.0762" layer="21"/>
+<wire x1="0.75" y1="-0.75" x2="-0.75" y2="-0.75" width="0.0762" layer="21"/>
+<wire x1="-0.7" y1="0.6" x2="-0.6" y2="0.7" width="0.0762" layer="21"/>
+<wire x1="-0.6" y1="0.7" x2="-0.7" y2="0.7" width="0.0762" layer="21"/>
+<wire x1="-0.7" y1="0.7" x2="-0.7" y2="0.6" width="0.0762" layer="21"/>
+<circle x="-0.9" y="0.9" radius="0.1" width="0.0762" layer="21"/>
+<text x="-0.7" y="1" size="0.3048" layer="25" font="fixed">&gt;Name</text>
+<text x="-0.7" y="-1.2" size="0.3048" layer="27" font="fixed">&gt;Value</text>
+<rectangle x1="-1.27" y1="-1.27" x2="1.27" y2="1.27" layer="41"/>
+<rectangle x1="-1.27" y1="-1.27" x2="1.27" y2="1.27" layer="42"/>
+</package>
+<package name="GM171538">
+<description>&lt;p&gt;&lt;b&gt;GM351824&lt;/b&gt;&lt;/p&gt;
+
+Li-Po cell battery pads, from PowerStream</description>
+<smd name="+" x="-3.75" y="3" dx="5.5" dy="6" layer="1"/>
+<smd name="-" x="3.75" y="3" dx="5.5" dy="6" layer="1"/>
+<wire x1="-6.5" y1="-1" x2="6.5" y2="-1" width="0.127" layer="21"/>
+<wire x1="6.5" y1="-1" x2="7.5" y2="-2" width="0.127" layer="21" curve="-90"/>
+<wire x1="7.5" y1="-2" x2="7.5" y2="-38" width="0.127" layer="21"/>
+<wire x1="7.5" y1="-38" x2="6.5" y2="-39" width="0.127" layer="21" curve="-90"/>
+<wire x1="6.5" y1="-39" x2="-6.5" y2="-39" width="0.127" layer="21"/>
+<wire x1="-6.5" y1="-39" x2="-7.5" y2="-38" width="0.127" layer="21" curve="-90"/>
+<wire x1="-7.5" y1="-2" x2="-6.5" y2="-1" width="0.127" layer="21" curve="-90"/>
+<wire x1="-7.5" y1="-2" x2="-7.5" y2="-38" width="0.127" layer="21"/>
+<polygon width="0.127" layer="21" pour="hatch">
+<vertex x="-6.5" y="0"/>
+<vertex x="-6.5" y="-1"/>
+<vertex x="-1" y="-1"/>
+<vertex x="-1" y="0"/>
+</polygon>
+<polygon width="0.127" layer="21" pour="hatch">
+<vertex x="1" y="0"/>
+<vertex x="1" y="-1"/>
+<vertex x="6.5" y="-1"/>
+<vertex x="6.5" y="0"/>
+</polygon>
+</package>
 </packages>
 <symbols>
 <symbol name="NRF52832-QFAA/QFAB">
@@ -1680,6 +1727,22 @@ N-Channel NexFET™ Power MOSFET</description>
 <pin name="VDD" x="5.08" y="7.62" length="middle" direction="pwr" rot="R180"/>
 <text x="2.54" y="20.32" size="1.27" layer="95">&gt;Name</text>
 <text x="2.54" y="-15.24" size="1.27" layer="96">&gt;Value</text>
+</symbol>
+<symbol name="HDC2010">
+<description>&lt;p&gt;&lt;b&gt;HDC2010 Humidity Sensor&lt;/b&gt;&lt;/p&gt;
+TI, I2C humidity sensor</description>
+<pin name="SDA" x="-15.24" y="5.08" visible="pin" length="middle"/>
+<pin name="GND" x="-15.24" y="0" visible="pin" length="middle" direction="sup"/>
+<pin name="DRDY/INT" x="-15.24" y="-5.08" visible="pin" length="middle" direction="out"/>
+<pin name="SCL" x="15.24" y="5.08" visible="pin" length="middle" direction="in" rot="R180"/>
+<pin name="VDD" x="15.24" y="-5.08" visible="pin" length="middle" direction="pwr" rot="R180"/>
+<pin name="ADDR" x="15.24" y="0" visible="pin" length="middle" direction="in" rot="R180"/>
+<wire x1="-10.16" y1="7.62" x2="-10.16" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="-7.62" x2="10.16" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-7.62" x2="10.16" y2="7.62" width="0.254" layer="94"/>
+<wire x1="10.16" y1="7.62" x2="-10.16" y2="7.62" width="0.254" layer="94"/>
+<text x="-2.54" y="10.16" size="1.27" layer="95">&gt;Name</text>
+<text x="-2.54" y="-10.16" size="1.27" layer="96">&gt;Value</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -2307,6 +2370,42 @@ Ti low power, high accuracy sensor</description>
 <connect gate="150080M153000-RGB-LED" pin="G" pad="2"/>
 <connect gate="150080M153000-RGB-LED" pin="R" pad="1"/>
 <connect gate="150080M153000-RGB-LED" pin="VDD" pad="4"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="HDC2010" prefix="HU">
+<gates>
+<gate name="HDC2010" symbol="HDC2010" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="DSBGA-6">
+<connects>
+<connect gate="HDC2010" pin="ADDR" pad="B1"/>
+<connect gate="HDC2010" pin="DRDY/INT" pad="C2"/>
+<connect gate="HDC2010" pin="GND" pad="C1"/>
+<connect gate="HDC2010" pin="SCL" pad="B2"/>
+<connect gate="HDC2010" pin="SDA" pad="A2"/>
+<connect gate="HDC2010" pin="VDD" pad="A1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="GM171538">
+<gates>
+<gate name="GM171538" symbol="BATTERY" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="GM171538">
+<connects>
+<connect gate="GM171538" pin="+" pad="+"/>
+<connect gate="GM171538" pin="-" pad="-"/>
 </connects>
 <technologies>
 <technology name=""/>
