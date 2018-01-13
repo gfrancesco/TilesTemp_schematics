@@ -10000,7 +10000,6 @@ http://www.ladyada.net/library/pcb/eaglelibrary.html</description>
 <part name="GND18" library="supply1" deviceset="GND" device=""/>
 <part name="SWDCLK" library="microbuilder" deviceset="TESTPOINT" device="ROUND2MM"/>
 <part name="SWDIO" library="microbuilder" deviceset="TESTPOINT" device="ROUND2MM"/>
-<part name="GND" library="microbuilder" deviceset="TESTPOINT" device="ROUND2MM"/>
 <part name="SWO" library="microbuilder" deviceset="TESTPOINT" device="ROUND2MM"/>
 <part name="GND12" library="supply1" deviceset="GND" device=""/>
 <part name="R16" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/2" value="0"/>
@@ -10152,7 +10151,6 @@ Usable ADC resolution - 12 bit setup: 4095 - 2634 = 1461</text>
 <instance part="GND18" gate="1" x="40.64" y="88.9" rot="MR0"/>
 <instance part="SWDCLK" gate="G$1" x="259.08" y="190.5" rot="R90"/>
 <instance part="SWDIO" gate="G$1" x="259.08" y="200.66" rot="R90"/>
-<instance part="GND" gate="G$1" x="259.08" y="167.64" rot="R90"/>
 <instance part="SWO" gate="G$1" x="259.08" y="208.28" rot="R90"/>
 <instance part="GND12" gate="1" x="213.36" y="116.84"/>
 <instance part="R16" gate="G$1" x="210.82" y="139.7"/>
@@ -10349,11 +10347,6 @@ Usable ADC resolution - 12 bit setup: 4095 - 2634 = 1461</text>
 <pinref part="C10" gate="G$1" pin="2"/>
 <pinref part="GND18" gate="1" pin="GND"/>
 <wire x1="40.64" y1="93.98" x2="40.64" y2="91.44" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="GND" gate="G$1" pin="P$1"/>
-<wire x1="259.08" y1="167.64" x2="261.62" y2="167.64" width="0.1524" layer="91"/>
-<label x="261.62" y="167.64" size="1.778" layer="95" xref="yes"/>
 </segment>
 <segment>
 <pinref part="R18" gate="G$1" pin="1"/>
