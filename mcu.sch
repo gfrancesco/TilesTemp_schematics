@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.5.2">
+<eagle version="8.6.3">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -1080,13 +1080,13 @@ Source: http://www.cypressindustries.com/pdf/32005-301.pdf</description>
 <smd name="M1" x="4.1" y="1.65" dx="1.6" dy="1.9" layer="1"/>
 <smd name="M2" x="-4.1" y="1.65" dx="1.6" dy="1.9" layer="1"/>
 <smd name="M3" x="-3.1" y="4" dx="2.1" dy="2" layer="1"/>
-<smd name="1" x="-1.3" y="4.325" dx="0.4" dy="1.35" layer="1"/>
+<smd name="5" x="-1.3" y="4.325" dx="0.4" dy="1.35" layer="1"/>
 <text x="-0.635" y="6.985" size="1.27" layer="25">&gt;NAME</text>
 <text x="-4.445" y="-6.985" size="1.27" layer="27">&gt;VALUE</text>
-<smd name="2" x="-0.65" y="4.325" dx="0.4" dy="1.35" layer="1"/>
+<smd name="4" x="-0.65" y="4.325" dx="0.4" dy="1.35" layer="1"/>
 <smd name="3" x="0" y="4.325" dx="0.4" dy="1.35" layer="1"/>
-<smd name="4" x="0.65" y="4.325" dx="0.4" dy="1.35" layer="1"/>
-<smd name="5" x="1.3" y="4.325" dx="0.4" dy="1.35" layer="1"/>
+<smd name="2" x="0.65" y="4.325" dx="0.4" dy="1.35" layer="1"/>
+<smd name="1" x="1.3" y="4.325" dx="0.4" dy="1.35" layer="1"/>
 <smd name="M4" x="3.1" y="4" dx="2.1" dy="2" layer="1"/>
 <smd name="M5" x="-0.85" y="1.65" dx="1.2" dy="1.9" layer="1"/>
 <smd name="M6" x="0.85" y="1.65" dx="1.2" dy="1.9" layer="1"/>
@@ -10629,10 +10629,10 @@ Usable ADC resolution - 12 bit setup: 4095 - 2634 = 1461</text>
 <pinref part="U4" gate="U$1" pin="P0.06@08"/>
 </segment>
 <segment>
-<pinref part="U7" gate="CP2102N-A01-GQFN24" pin="TXD"/>
-<wire x1="220.98" y1="373.38" x2="220.98" y2="381" width="0.1524" layer="91"/>
-<wire x1="220.98" y1="381" x2="228.6" y2="381" width="0.1524" layer="91"/>
-<label x="228.6" y="381" size="1.778" layer="95" xref="yes"/>
+<pinref part="U7" gate="CP2102N-A01-GQFN24" pin="RXD"/>
+<wire x1="223.52" y1="373.38" x2="223.52" y2="378.46" width="0.1524" layer="91"/>
+<label x="238.76" y="378.46" size="1.778" layer="95" xref="yes"/>
+<wire x1="223.52" y1="378.46" x2="238.76" y2="378.46" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="P0.07" class="0">
@@ -10649,10 +10649,10 @@ Usable ADC resolution - 12 bit setup: 4095 - 2634 = 1461</text>
 <pinref part="U4" gate="U$1" pin="P0.08@10"/>
 </segment>
 <segment>
-<pinref part="U7" gate="CP2102N-A01-GQFN24" pin="RXD"/>
-<wire x1="223.52" y1="373.38" x2="223.52" y2="378.46" width="0.1524" layer="91"/>
-<label x="238.76" y="378.46" size="1.778" layer="95" xref="yes"/>
-<wire x1="223.52" y1="378.46" x2="238.76" y2="378.46" width="0.1524" layer="91"/>
+<pinref part="U7" gate="CP2102N-A01-GQFN24" pin="TXD"/>
+<wire x1="220.98" y1="373.38" x2="220.98" y2="381" width="0.1524" layer="91"/>
+<wire x1="220.98" y1="381" x2="228.6" y2="381" width="0.1524" layer="91"/>
+<label x="228.6" y="381" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="P0.09" class="0">
@@ -10716,11 +10716,6 @@ Usable ADC resolution - 12 bit setup: 4095 - 2634 = 1461</text>
 <wire x1="76.2" y1="195.58" x2="76.2" y2="193.04" width="0.1524" layer="91"/>
 <label x="76.2" y="193.04" size="1.27" layer="95" rot="R270" xref="yes"/>
 <pinref part="U4" gate="U$1" pin="P0.18/SWO@21"/>
-</segment>
-<segment>
-<pinref part="SWO" gate="G$1" pin="P$1"/>
-<wire x1="259.08" y1="208.28" x2="261.62" y2="208.28" width="0.1524" layer="91"/>
-<label x="261.62" y="208.28" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="P0.19" class="0">
@@ -10948,6 +10943,11 @@ Usable ADC resolution - 12 bit setup: 4095 - 2634 = 1461</text>
 <pinref part="VDD_10" gate="1" pin="V+"/>
 <wire x1="-88.9" y1="124.46" x2="-81.28" y2="124.46" width="0.1524" layer="91"/>
 <wire x1="-81.28" y1="124.46" x2="-81.28" y2="129.54" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="SWO" gate="G$1" pin="P$1"/>
+<wire x1="259.08" y1="208.28" x2="261.62" y2="208.28" width="0.1524" layer="91"/>
+<label x="261.62" y="208.28" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="N$1" class="0">
