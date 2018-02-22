@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.6.3">
+<eagle version="8.6.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -1416,27 +1416,41 @@ From MBR120VLSF, NRVB120VLSF datasheet</description>
 <pin name="C" x="2.54" y="0" visible="off" length="short" direction="pas" rot="R180"/>
 </symbol>
 <symbol name="µUSB-REV-RECPT">
-<wire x1="7.112" y1="6.858" x2="-7.112" y2="6.858" width="0.254" layer="94"/>
+<description>µUSB receptable, back view, opposite of cable plug</description>
+<wire x1="7.112" y1="6.858" x2="1.016" y2="6.858" width="0.254" layer="94"/>
+<wire x1="1.016" y1="6.858" x2="0.254" y2="6.858" width="0.254" layer="94"/>
+<wire x1="0.254" y1="6.858" x2="-7.112" y2="6.858" width="0.254" layer="94"/>
 <wire x1="-7.366" y1="2.54" x2="7.366" y2="2.54" width="0.254" layer="94"/>
 <wire x1="8.89" y1="5.08" x2="8.89" y2="3.81" width="0.254" layer="94"/>
 <wire x1="8.89" y1="3.81" x2="7.366" y2="2.54" width="0.254" layer="94" curve="-90"/>
-<wire x1="5.08" y1="5.842" x2="-5.08" y2="5.842" width="0.254" layer="94"/>
+<wire x1="5.08" y1="5.842" x2="1.016" y2="5.842" width="0.254" layer="94"/>
+<wire x1="1.016" y1="5.842" x2="0.254" y2="5.842" width="0.254" layer="94"/>
+<wire x1="-0.254" y1="5.842" x2="-1.016" y2="5.842" width="0.254" layer="94"/>
+<wire x1="-1.016" y1="5.842" x2="-5.08" y2="5.842" width="0.254" layer="94"/>
 <wire x1="-5.08" y1="5.842" x2="-6.35" y2="4.318" width="0.254" layer="94"/>
 <wire x1="-6.35" y1="4.318" x2="-6.35" y2="3.302" width="0.254" layer="94"/>
 <wire x1="-6.35" y1="3.302" x2="6.35" y2="3.302" width="0.254" layer="94"/>
 <wire x1="6.35" y1="3.302" x2="6.35" y2="4.318" width="0.254" layer="94"/>
 <wire x1="6.35" y1="4.318" x2="5.08" y2="5.842" width="0.254" layer="94"/>
-<text x="-4.318" y="10.668" size="1.778" layer="95">&gt;NAME</text>
+<text x="8.382" y="10.668" size="1.778" layer="95">&gt;NAME</text>
 <text x="6.858" y="-0.508" size="1.778" layer="96">&gt;VALUE</text>
-<pin name="1" x="5.08" y="-2.54" visible="pin" direction="pas" rot="R90"/>
-<pin name="2" x="2.54" y="-2.54" visible="pin" direction="pas" rot="R90"/>
+<pin name="5" x="5.08" y="-2.54" visible="pin" direction="pas" rot="R90"/>
+<pin name="4" x="2.54" y="-2.54" visible="pin" direction="pas" rot="R90"/>
 <pin name="3" x="0" y="-2.54" visible="pin" direction="pas" rot="R90"/>
-<pin name="4" x="-2.54" y="-2.54" visible="pin" direction="pas" rot="R90"/>
-<pin name="5" x="-5.08" y="-2.54" visible="pin" direction="pas" rot="R90"/>
+<pin name="2" x="-2.54" y="-2.54" visible="pin" direction="pas" rot="R90"/>
+<pin name="1" x="-5.08" y="-2.54" visible="pin" direction="pas" rot="R90"/>
 <wire x1="-8.89" y1="5.08" x2="-7.112" y2="6.858" width="0.254" layer="94"/>
 <wire x1="8.89" y1="5.08" x2="7.112" y2="6.858" width="0.254" layer="94"/>
 <wire x1="-8.89" y1="3.81" x2="-7.366" y2="2.54" width="0.254" layer="94" curve="90"/>
 <wire x1="-8.89" y1="5.08" x2="-8.89" y2="3.81" width="0.254" layer="94"/>
+<wire x1="-1.016" y1="6.604" x2="-1.016" y2="5.842" width="0.254" layer="94"/>
+<wire x1="-1.016" y1="5.842" x2="-1.778" y2="5.08" width="0.254" layer="94"/>
+<wire x1="-1.778" y1="5.08" x2="1.778" y2="5.08" width="0.254" layer="94"/>
+<wire x1="1.778" y1="5.08" x2="1.016" y2="5.842" width="0.254" layer="94"/>
+<wire x1="1.016" y1="5.842" x2="1.016" y2="6.858" width="0.254" layer="94"/>
+<wire x1="-0.254" y1="6.604" x2="-0.254" y2="5.842" width="0.254" layer="94"/>
+<wire x1="-0.254" y1="5.842" x2="0.254" y2="5.842" width="0.254" layer="94"/>
+<wire x1="0.254" y1="5.842" x2="0.254" y2="6.858" width="0.254" layer="94"/>
 </symbol>
 <symbol name="CP2102N-A01-GQFN24">
 <wire x1="-20.32" y1="17.78" x2="17.78" y2="17.78" width="0.254" layer="94"/>
@@ -10094,8 +10108,8 @@ Usable ADC resolution - 12 bit setup: 4095 - 2634 = 1461</text>
 <instance part="MOS1" gate="DMG3415U*" x="-68.58" y="355.6"/>
 <instance part="D1" gate="NRVB120VLSF" x="-76.2" y="345.44"/>
 <instance part="USB1" gate="ZX62R-B-5P(30)" x="45.72" y="355.6"/>
-<instance part="GND5" gate="1" x="40.64" y="345.44"/>
-<instance part="U$4" gate="G$2" x="58.42" y="345.44"/>
+<instance part="GND5" gate="1" x="50.8" y="345.44"/>
+<instance part="U$4" gate="G$2" x="35.56" y="350.52"/>
 <instance part="IC1" gate="G$1" x="111.76" y="347.98"/>
 <instance part="U$5" gate="G$2" x="73.66" y="363.22"/>
 <instance part="GND7" gate="1" x="139.7" y="327.66"/>
@@ -10237,7 +10251,7 @@ Usable ADC resolution - 12 bit setup: 4095 - 2634 = 1461</text>
 <segment>
 <pinref part="USB1" gate="ZX62R-B-5P(30)" pin="5"/>
 <pinref part="GND5" gate="1" pin="GND"/>
-<wire x1="40.64" y1="353.06" x2="40.64" y2="347.98" width="0.1524" layer="91"/>
+<wire x1="50.8" y1="353.06" x2="50.8" y2="347.98" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="R4" gate="G$1" pin="2"/>
@@ -10975,26 +10989,26 @@ Usable ADC resolution - 12 bit setup: 4095 - 2634 = 1461</text>
 </net>
 <net name="USBD-" class="0">
 <segment>
-<pinref part="USB1" gate="ZX62R-B-5P(30)" pin="3"/>
-<wire x1="45.72" y1="353.06" x2="45.72" y2="335.28" width="0.1524" layer="91"/>
-<label x="45.72" y="335.28" size="1.778" layer="95" rot="R180" xref="yes"/>
-</segment>
-<segment>
 <pinref part="U7" gate="CP2102N-A01-GQFN24" pin="D-"/>
 <label x="180.34" y="353.06" size="1.778" layer="95" rot="R180" xref="yes"/>
 <wire x1="195.58" y1="353.06" x2="180.34" y2="353.06" width="0.1524" layer="91"/>
 </segment>
-</net>
-<net name="USBD+" class="0">
 <segment>
 <pinref part="USB1" gate="ZX62R-B-5P(30)" pin="2"/>
-<wire x1="48.26" y1="353.06" x2="48.26" y2="327.66" width="0.1524" layer="91"/>
-<label x="48.26" y="327.66" size="1.778" layer="95" rot="R180" xref="yes"/>
+<wire x1="43.18" y1="353.06" x2="43.18" y2="330.2" width="0.1524" layer="91"/>
+<label x="43.18" y="330.2" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
+</net>
+<net name="USBD+" class="0">
 <segment>
 <pinref part="U7" gate="CP2102N-A01-GQFN24" pin="D+"/>
 <wire x1="195.58" y1="355.6" x2="193.04" y2="355.6" width="0.1524" layer="91"/>
 <label x="193.04" y="355.6" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="USB1" gate="ZX62R-B-5P(30)" pin="3"/>
+<wire x1="45.72" y1="353.06" x2="45.72" y2="335.28" width="0.1524" layer="91"/>
+<label x="45.72" y="335.28" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="N$3" class="0">
@@ -11098,10 +11112,10 @@ Usable ADC resolution - 12 bit setup: 4095 - 2634 = 1461</text>
 </segment>
 <segment>
 <pinref part="U$4" gate="G$2" pin="VUSB"/>
-<wire x1="58.42" y1="342.9" x2="58.42" y2="337.82" width="0.1524" layer="91"/>
-<wire x1="58.42" y1="337.82" x2="50.8" y2="337.82" width="0.1524" layer="91"/>
+<wire x1="35.56" y1="347.98" x2="35.56" y2="340.36" width="0.1524" layer="91"/>
+<wire x1="35.56" y1="340.36" x2="40.64" y2="340.36" width="0.1524" layer="91"/>
 <pinref part="USB1" gate="ZX62R-B-5P(30)" pin="1"/>
-<wire x1="50.8" y1="337.82" x2="50.8" y2="353.06" width="0.1524" layer="91"/>
+<wire x1="40.64" y1="340.36" x2="40.64" y2="353.06" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="IC1" gate="G$1" pin="VDD"/>

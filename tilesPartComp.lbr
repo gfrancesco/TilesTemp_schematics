@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.6.3">
+<eagle version="8.6.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -1464,27 +1464,41 @@ Li-Po cell battery pads, from PowerStream</description>
 <pin name="C" x="2.54" y="0" visible="off" length="short" direction="pas" rot="R180"/>
 </symbol>
 <symbol name="µUSB-REV-RECPT">
-<wire x1="7.112" y1="6.858" x2="-7.112" y2="6.858" width="0.254" layer="94"/>
+<description>µUSB receptable, back view, opposite of cable plug</description>
+<wire x1="7.112" y1="6.858" x2="1.016" y2="6.858" width="0.254" layer="94"/>
+<wire x1="1.016" y1="6.858" x2="0.254" y2="6.858" width="0.254" layer="94"/>
+<wire x1="0.254" y1="6.858" x2="-7.112" y2="6.858" width="0.254" layer="94"/>
 <wire x1="-7.366" y1="2.54" x2="7.366" y2="2.54" width="0.254" layer="94"/>
 <wire x1="8.89" y1="5.08" x2="8.89" y2="3.81" width="0.254" layer="94"/>
 <wire x1="8.89" y1="3.81" x2="7.366" y2="2.54" width="0.254" layer="94" curve="-90"/>
-<wire x1="5.08" y1="5.842" x2="-5.08" y2="5.842" width="0.254" layer="94"/>
+<wire x1="5.08" y1="5.842" x2="1.016" y2="5.842" width="0.254" layer="94"/>
+<wire x1="1.016" y1="5.842" x2="0.254" y2="5.842" width="0.254" layer="94"/>
+<wire x1="-0.254" y1="5.842" x2="-1.016" y2="5.842" width="0.254" layer="94"/>
+<wire x1="-1.016" y1="5.842" x2="-5.08" y2="5.842" width="0.254" layer="94"/>
 <wire x1="-5.08" y1="5.842" x2="-6.35" y2="4.318" width="0.254" layer="94"/>
 <wire x1="-6.35" y1="4.318" x2="-6.35" y2="3.302" width="0.254" layer="94"/>
 <wire x1="-6.35" y1="3.302" x2="6.35" y2="3.302" width="0.254" layer="94"/>
 <wire x1="6.35" y1="3.302" x2="6.35" y2="4.318" width="0.254" layer="94"/>
 <wire x1="6.35" y1="4.318" x2="5.08" y2="5.842" width="0.254" layer="94"/>
-<text x="-4.318" y="10.668" size="1.778" layer="95">&gt;NAME</text>
+<text x="8.382" y="10.668" size="1.778" layer="95">&gt;NAME</text>
 <text x="6.858" y="-0.508" size="1.778" layer="96">&gt;VALUE</text>
-<pin name="1" x="5.08" y="-2.54" visible="pin" direction="pas" rot="R90"/>
-<pin name="2" x="2.54" y="-2.54" visible="pin" direction="pas" rot="R90"/>
+<pin name="5" x="5.08" y="-2.54" visible="pin" direction="pas" rot="R90"/>
+<pin name="4" x="2.54" y="-2.54" visible="pin" direction="pas" rot="R90"/>
 <pin name="3" x="0" y="-2.54" visible="pin" direction="pas" rot="R90"/>
-<pin name="4" x="-2.54" y="-2.54" visible="pin" direction="pas" rot="R90"/>
-<pin name="5" x="-5.08" y="-2.54" visible="pin" direction="pas" rot="R90"/>
+<pin name="2" x="-2.54" y="-2.54" visible="pin" direction="pas" rot="R90"/>
+<pin name="1" x="-5.08" y="-2.54" visible="pin" direction="pas" rot="R90"/>
 <wire x1="-8.89" y1="5.08" x2="-7.112" y2="6.858" width="0.254" layer="94"/>
 <wire x1="8.89" y1="5.08" x2="7.112" y2="6.858" width="0.254" layer="94"/>
 <wire x1="-8.89" y1="3.81" x2="-7.366" y2="2.54" width="0.254" layer="94" curve="90"/>
 <wire x1="-8.89" y1="5.08" x2="-8.89" y2="3.81" width="0.254" layer="94"/>
+<wire x1="-1.016" y1="6.604" x2="-1.016" y2="5.842" width="0.254" layer="94"/>
+<wire x1="-1.016" y1="5.842" x2="-1.778" y2="5.08" width="0.254" layer="94"/>
+<wire x1="-1.778" y1="5.08" x2="1.778" y2="5.08" width="0.254" layer="94"/>
+<wire x1="1.778" y1="5.08" x2="1.016" y2="5.842" width="0.254" layer="94"/>
+<wire x1="1.016" y1="5.842" x2="1.016" y2="6.858" width="0.254" layer="94"/>
+<wire x1="-0.254" y1="6.604" x2="-0.254" y2="5.842" width="0.254" layer="94"/>
+<wire x1="-0.254" y1="5.842" x2="0.254" y2="5.842" width="0.254" layer="94"/>
+<wire x1="0.254" y1="5.842" x2="0.254" y2="6.858" width="0.254" layer="94"/>
 </symbol>
 <symbol name="CP2102N-A01-GQFN24">
 <wire x1="-20.32" y1="17.78" x2="17.78" y2="17.78" width="0.254" layer="94"/>
