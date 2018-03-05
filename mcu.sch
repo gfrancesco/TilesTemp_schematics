@@ -1025,28 +1025,6 @@ IPC Medium Density</description>
 </library>
 <library name="tilesPartComp">
 <packages>
-<package name="SOT23">
-<description>&lt;b&gt;SMALL OUTLINE TRANSISTOR&lt;/b&gt;&lt;p&gt;
-&lt;p&gt;reflow soldering&lt;/p&gt;
-&lt;p&gt;From DMG3415U datasheet&lt;/p&gt;</description>
-<wire x1="-1.973" y1="1.983" x2="1.973" y2="1.983" width="0.0508" layer="39"/>
-<wire x1="1.973" y1="-1.983" x2="-1.973" y2="-1.983" width="0.0508" layer="39"/>
-<wire x1="-1.973" y1="-1.983" x2="-1.973" y2="1.983" width="0.0508" layer="39"/>
-<wire x1="1.973" y1="1.983" x2="1.973" y2="-1.983" width="0.0508" layer="39"/>
-<wire x1="1.422" y1="0.66" x2="1.422" y2="-0.66" width="0.1524" layer="51"/>
-<wire x1="1.422" y1="-0.66" x2="-1.422" y2="-0.66" width="0.1524" layer="51"/>
-<wire x1="-1.422" y1="-0.66" x2="-1.422" y2="0.66" width="0.1524" layer="51"/>
-<wire x1="-1.422" y1="0.66" x2="1.422" y2="0.66" width="0.1524" layer="51"/>
-<smd name="1" x="-0.95" y="-1" dx="0.8" dy="0.9" layer="1"/>
-<text x="-1.905" y="1.905" size="1.27" layer="25">&gt;NAME</text>
-<text x="-1.905" y="-3.175" size="1.27" layer="27">&gt;VALUE</text>
-<rectangle x1="-0.2286" y1="0.7112" x2="0.2286" y2="1.2954" layer="51"/>
-<rectangle x1="0.7112" y1="-1.2954" x2="1.1684" y2="-0.7112" layer="51"/>
-<rectangle x1="-1.1684" y1="-1.2954" x2="-0.7112" y2="-0.7112" layer="51"/>
-<rectangle x1="-0.5001" y1="-0.3" x2="0.5001" y2="0.3" layer="35"/>
-<smd name="2" x="0.95" y="-1" dx="0.8" dy="0.9" layer="1"/>
-<smd name="3" x="0" y="1" dx="0.8" dy="0.9" layer="1"/>
-</package>
 <package name="ZX62R-B-5P(30)">
 <description>&lt;b&gt;MINI USB-B R/A SMT W/O REAR&lt;/b&gt;&lt;p&gt;
 Source: http://www.cypressindustries.com/pdf/32005-301.pdf</description>
@@ -1169,6 +1147,21 @@ Johanson Technology 2.45 GHz antenna with vertical layout, placeholders for π-m
 <text x="-0.7" y="1" size="0.3048" layer="25" font="fixed">&gt;Name</text>
 <text x="-0.7" y="-1.2" size="0.3048" layer="27" font="fixed">&gt;Value</text>
 </package>
+<package name="MICROFET_2X2">
+<smd name="2" x="0" y="0.915" dx="0.42" dy="0.42" layer="1"/>
+<smd name="5" x="0" y="-0.915" dx="0.42" dy="0.42" layer="1"/>
+<smd name="1" x="0.65" y="0.915" dx="0.42" dy="0.42" layer="1"/>
+<smd name="6" x="0.65" y="-0.915" dx="0.42" dy="0.42" layer="1"/>
+<smd name="4" x="-0.65" y="-0.915" dx="0.42" dy="0.42" layer="1"/>
+<smd name="3" x="-0.65" y="0.915" dx="0.42" dy="0.42" layer="1"/>
+<smd name="C" x="0.5" y="0" dx="0.8" dy="1" layer="1"/>
+<smd name="D" x="-0.5" y="0" dx="0.8" dy="1" layer="1"/>
+<circle x="1.4" y="1.3" radius="0.14141875" width="0.127" layer="21"/>
+<wire x1="1" y1="1" x2="1" y2="-1" width="0.127" layer="21"/>
+<wire x1="-1" y1="1" x2="-1" y2="-1" width="0.127" layer="21"/>
+<text x="-1" y="-1.6" size="0.4064" layer="25">&gt;NAME</text>
+<text x="-1" y="1.321" size="0.4064" layer="27">&gt;VALUE</text>
+</package>
 </packages>
 <symbols>
 <symbol name="VBAT">
@@ -1182,66 +1175,6 @@ Johanson Technology 2.45 GHz antenna with vertical layout, placeholders for π-m
 <wire x1="0" y1="0" x2="-1.27" y2="-1.905" width="0.254" layer="94"/>
 <text x="-2.54" y="2.54" size="1.778" layer="96">&gt;VALUE</text>
 <pin name="VUSB" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
-</symbol>
-<symbol name="DMG3415U">
-<wire x1="0.762" y1="0.762" x2="0.762" y2="0" width="0.254" layer="94"/>
-<wire x1="0.762" y1="0" x2="0.762" y2="-0.762" width="0.254" layer="94"/>
-<wire x1="0.762" y1="3.175" x2="0.762" y2="2.54" width="0.254" layer="94"/>
-<wire x1="0.762" y1="2.54" x2="0.762" y2="1.905" width="0.254" layer="94"/>
-<wire x1="0.762" y1="0" x2="2.54" y2="0" width="0.1524" layer="94"/>
-<wire x1="2.54" y1="0" x2="2.54" y2="-2.54" width="0.1524" layer="94"/>
-<wire x1="0.762" y1="-1.905" x2="0.762" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="0.762" y1="-2.54" x2="0.762" y2="-3.175" width="0.254" layer="94"/>
-<wire x1="0" y1="2.54" x2="0" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="2.54" y1="-2.54" x2="0.762" y2="-2.54" width="0.1524" layer="94"/>
-<wire x1="3.81" y1="2.54" x2="3.81" y2="-0.254" width="0.1524" layer="94"/>
-<wire x1="3.81" y1="-0.254" x2="3.81" y2="-2.54" width="0.1524" layer="94"/>
-<wire x1="2.54" y1="-2.54" x2="3.81" y2="-2.54" width="0.1524" layer="94"/>
-<wire x1="0.762" y1="2.54" x2="2.54" y2="2.54" width="0.1524" layer="94"/>
-<wire x1="2.54" y1="2.54" x2="3.81" y2="2.54" width="0.1524" layer="94"/>
-<wire x1="4.318" y1="-0.254" x2="3.81" y2="-0.254" width="0.1524" layer="94"/>
-<wire x1="3.81" y1="-0.254" x2="3.302" y2="-0.254" width="0.1524" layer="94"/>
-<circle x="2.54" y="-2.54" radius="0.3592" width="0" layer="94"/>
-<circle x="2.54" y="2.54" radius="0.3592" width="0" layer="94"/>
-<text x="5.08" y="5.715" size="1.778" layer="95">&gt;NAME</text>
-<text x="5.08" y="-5.588" size="1.27" layer="96">&gt;VALUE</text>
-<text x="3.175" y="7.493" size="0.8128" layer="93">D</text>
-<text x="3.175" y="-9.652" size="0.8128" layer="93">S</text>
-<text x="-6.858" y="-1.905" size="0.8128" layer="93">G</text>
-<pin name="G" x="-7.62" y="-2.54" visible="pad" length="short"/>
-<pin name="S" x="2.54" y="-10.16" visible="pad" length="short" rot="R90"/>
-<pin name="D" x="2.54" y="7.62" visible="pad" length="short" rot="R270"/>
-<polygon width="0.1524" layer="94">
-<vertex x="3.81" y="-0.254"/>
-<vertex x="4.318" y="0.508"/>
-<vertex x="3.302" y="0.508"/>
-</polygon>
-<polygon width="0.1524" layer="94">
-<vertex x="2.54" y="0"/>
-<vertex x="1.524" y="0.762"/>
-<vertex x="1.524" y="-0.762"/>
-</polygon>
-<wire x1="-0.762" y1="-4.318" x2="-0.508" y2="-4.572" width="0.1524" layer="94"/>
-<wire x1="-0.508" y1="-4.572" x2="-0.508" y2="-5.588" width="0.1524" layer="94"/>
-<wire x1="-0.508" y1="-5.588" x2="-0.254" y2="-5.842" width="0.1524" layer="94"/>
-<wire x1="2.54" y1="-2.54" x2="2.54" y2="-5.08" width="0.1524" layer="94"/>
-<wire x1="0" y1="-2.54" x2="-2.54" y2="-2.54" width="0.1524" layer="94"/>
-<wire x1="2.54" y1="-5.08" x2="-2.54" y2="-5.08" width="0.1524" layer="94"/>
-<wire x1="-2.54" y1="-2.54" x2="-2.54" y2="-5.08" width="0.1524" layer="94"/>
-<polygon width="0.1524" layer="94">
-<vertex x="-0.508" y="-5.08"/>
-<vertex x="0.254" y="-5.588"/>
-<vertex x="0.254" y="-4.572"/>
-</polygon>
-<polygon width="0.1524" layer="94">
-<vertex x="-0.508" y="-5.08"/>
-<vertex x="-1.27" y="-4.572"/>
-<vertex x="-1.27" y="-5.588"/>
-</polygon>
-<circle x="2.54" y="0" radius="4.165909375" width="0.254" layer="94"/>
-<wire x1="2.54" y1="5.08" x2="2.54" y2="2.54" width="0.1524" layer="94"/>
-<wire x1="2.54" y1="-5.08" x2="2.54" y2="-7.62" width="0.1524" layer="94"/>
-<wire x1="-5.08" y1="-2.54" x2="-2.54" y2="-2.54" width="0.1524" layer="94"/>
 </symbol>
 <symbol name="µUSB-REV-RECPT">
 <description>µUSB receptable, back view, opposite of cable plug</description>
@@ -1350,6 +1283,20 @@ TI, I2C humidity sensor</description>
 <text x="-2.54" y="10.16" size="1.27" layer="95">&gt;Name</text>
 <text x="-2.54" y="-10.16" size="1.27" layer="96">&gt;Value</text>
 </symbol>
+<symbol name="FDFMA2P029Z">
+<description>P-channel MOSFET with Schotty diode and ESG protection</description>
+<pin name="A" x="-15.24" y="5.08" length="middle"/>
+<pin name="D" x="-15.24" y="-5.08" length="middle"/>
+<pin name="C" x="15.24" y="5.08" length="middle" rot="R180"/>
+<pin name="G" x="15.24" y="0" length="middle" rot="R180"/>
+<pin name="S" x="15.24" y="-5.08" length="middle" rot="R180"/>
+<wire x1="-10.16" y1="7.62" x2="-10.16" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="-7.62" x2="10.16" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-7.62" x2="10.16" y2="7.62" width="0.254" layer="94"/>
+<wire x1="10.16" y1="7.62" x2="-10.16" y2="7.62" width="0.254" layer="94"/>
+<text x="-7.62" y="-12.7" size="1.778" layer="96">&gt;VALUE</text>
+<text x="-7.62" y="10.16" size="1.778" layer="95">&gt;NAME</text>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="VBAT">
@@ -1374,24 +1321,6 @@ TI, I2C humidity sensor</description>
 <device name="">
 <technologies>
 <technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="DMG3415U" prefix="MOS">
-<description>Mosfet, p-channel enhancement mode</description>
-<gates>
-<gate name="DMG3415U*" symbol="DMG3415U" x="-2.54" y="0"/>
-</gates>
-<devices>
-<device name="" package="SOT23">
-<connects>
-<connect gate="DMG3415U*" pin="D" pad="3"/>
-<connect gate="DMG3415U*" pin="G" pad="1"/>
-<connect gate="DMG3415U*" pin="S" pad="2"/>
-</connects>
-<technologies>
-<technology name="-7"/>
 </technologies>
 </device>
 </devices>
@@ -1505,6 +1434,25 @@ From Johanson Technology, for nRF52832 QFA</description>
 <connect gate="HDC2010" pin="SCL" pad="B2"/>
 <connect gate="HDC2010" pin="SDA" pad="A2"/>
 <connect gate="HDC2010" pin="VDD" pad="A1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="FDFMA2P029Z" prefix="MOS">
+<gates>
+<gate name="G$1" symbol="FDFMA2P029Z" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="MICROFET_2X2">
+<connects>
+<connect gate="G$1" pin="A" pad="1"/>
+<connect gate="G$1" pin="C" pad="6"/>
+<connect gate="G$1" pin="D" pad="3"/>
+<connect gate="G$1" pin="G" pad="5"/>
+<connect gate="G$1" pin="S" pad="4"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -2233,132 +2181,6 @@ http://www.ladyada.net/library/pcb/eaglelibrary.html</description>
 </deviceset>
 </devicesets>
 </library>
-<library name="MF_Discrete_Semiconductor">
-<packages>
-<package name="SMA">
-<description>&lt;b&gt;Description:&lt;/b&gt; Footprint for Diodes in SMA Standard.&lt;br/&gt;</description>
-<smd name="CATHODE" x="-2" y="0" dx="2.5" dy="1.7" layer="1" rot="R180"/>
-<smd name="ANODE" x="2" y="0" dx="2.5" dy="1.7" layer="1" rot="R180"/>
-<text x="-4.2" y="1.89" size="1.016" layer="25" font="vector" ratio="16">&gt;NAME</text>
-<polygon width="0.127" layer="21">
-<vertex x="-0.35" y="0"/>
-<vertex x="0.35" y="0.5"/>
-<vertex x="0.35" y="-0.5"/>
-</polygon>
-<wire x1="-3.6" y1="1.6" x2="3.6" y2="1.6" width="0.127" layer="21"/>
-<wire x1="3.6" y1="1.6" x2="3.6" y2="-1.6" width="0.127" layer="21"/>
-<wire x1="3.6" y1="-1.6" x2="-3.6" y2="-1.6" width="0.127" layer="21"/>
-<wire x1="-3.6" y1="-1.6" x2="-3.6" y2="1.6" width="0.127" layer="21"/>
-<polygon width="0.127" layer="21">
-<vertex x="-4.2" y="1.6"/>
-<vertex x="-3.6" y="1.6"/>
-<vertex x="-3.6" y="-1.6"/>
-<vertex x="-4.2" y="-1.6"/>
-</polygon>
-</package>
-<package name="SOD-123">
-<description>&lt;b&gt;Description:&lt;/b&gt; Footprint for Diodes in SOD-123 Standard.&lt;br/&gt;</description>
-<smd name="CATHODE" x="-1.675" y="0" dx="0.85" dy="1.2" layer="1" rot="R180"/>
-<smd name="ANODE" x="1.675" y="0" dx="0.85" dy="1.2" layer="1" rot="R180"/>
-<text x="-2.8" y="1.09" size="1.016" layer="25" font="vector" ratio="16">&gt;NAME</text>
-<polygon width="0.127" layer="21">
-<vertex x="-0.35" y="0"/>
-<vertex x="0.15" y="0.3"/>
-<vertex x="0.15" y="-0.3"/>
-</polygon>
-<wire x1="-2.4" y1="0.85" x2="2.4" y2="0.85" width="0.127" layer="21"/>
-<wire x1="2.4" y1="0.85" x2="2.4" y2="-0.85" width="0.127" layer="21"/>
-<wire x1="2.4" y1="-0.85" x2="-2.4" y2="-0.85" width="0.127" layer="21"/>
-<wire x1="-2.4" y1="-0.85" x2="-2.4" y2="0.85" width="0.127" layer="21"/>
-<polygon width="0.127" layer="21">
-<vertex x="-2.8" y="0.85"/>
-<vertex x="-2.4" y="0.85"/>
-<vertex x="-2.4" y="-0.85"/>
-<vertex x="-2.8" y="-0.85"/>
-</polygon>
-</package>
-</packages>
-<symbols>
-<symbol name="DIODE">
-<description>&lt;b&gt;Description:&lt;/b&gt; Symbol for Single Diodes.&lt;br/&gt;</description>
-<wire x1="1.016" y1="1.524" x2="1.016" y2="-1.524" width="0.254" layer="94"/>
-<wire x1="0.762" y1="0" x2="-0.762" y2="-1.524" width="0.254" layer="94"/>
-<wire x1="-0.762" y1="-1.524" x2="-0.762" y2="1.524" width="0.254" layer="94"/>
-<wire x1="-0.762" y1="1.524" x2="0.762" y2="0" width="0.254" layer="94"/>
-<polygon width="0.254" layer="94">
-<vertex x="-0.762" y="-1.524"/>
-<vertex x="-0.762" y="1.524"/>
-<vertex x="0.762" y="0"/>
-</polygon>
-<text x="-2.54" y="5.08" size="1.016" layer="95" font="vector" align="top-left">&gt;NAME</text>
-<text x="-2.54" y="2.54" size="1.016" layer="96" font="vector">&gt;VALUE</text>
-<pin name="ANODE" x="-2.54" y="0" visible="off" length="short"/>
-<pin name="CATHODE" x="2.54" y="0" visible="off" length="short" rot="R180"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="DIODES" prefix="D">
-<description>&lt;b&gt;Library:&lt;/b&gt;  MF_Discrete_Semiconductor&lt;br/&gt;
-&lt;b&gt;Description:&lt;/b&gt; Device for Single Packaged Diodes.&lt;br/&gt;</description>
-<gates>
-<gate name="G$1" symbol="DIODE" x="0" y="0"/>
-</gates>
-<devices>
-<device name="_SMA" package="SMA">
-<connects>
-<connect gate="G$1" pin="ANODE" pad="ANODE"/>
-<connect gate="G$1" pin="CATHODE" pad="CATHODE"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="HOUSEPART" value="NO" constant="no"/>
-<attribute name="MPN" value="" constant="no"/>
-<attribute name="POPULATE" value="1" constant="no"/>
-<attribute name="URL" value="" constant="no"/>
-<attribute name="VALUE" value="" constant="no"/>
-</technology>
-<technology name="_B140">
-<attribute name="HOUSEPART" value="YES" constant="no"/>
-<attribute name="MPN" value="MF-DIO-SMA-B140" constant="no"/>
-<attribute name="POPULATE" value="1" constant="no"/>
-<attribute name="URL" value="https://factory.macrofab.com/part/MF-DIO-SMA-B140" constant="no"/>
-<attribute name="VALUE" value="MF-DIO-SMA-B140" constant="no"/>
-</technology>
-</technologies>
-</device>
-<device name="_SOD-123" package="SOD-123">
-<connects>
-<connect gate="G$1" pin="ANODE" pad="ANODE"/>
-<connect gate="G$1" pin="CATHODE" pad="CATHODE"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="HOUSEPART" value="NO" constant="no"/>
-<attribute name="MPN" value="" constant="no"/>
-<attribute name="POPULATE" value="1" constant="no"/>
-<attribute name="URL" value="" constant="no"/>
-<attribute name="VALUE" value="" constant="no"/>
-</technology>
-<technology name="_1N4148">
-<attribute name="HOUSEPART" value="YES" constant="no"/>
-<attribute name="MPN" value="MF-DIO-SOD123-1N4148" constant="no"/>
-<attribute name="POPULATE" value="1" constant="no"/>
-<attribute name="URL" value="https://factory.macrofab.com/part/MF-DIO-SOD123-1N4148" constant="no"/>
-<attribute name="VALUE" value="MF-DIO-SOD123-1N4148" constant="no"/>
-</technology>
-<technology name="_BAT42">
-<attribute name="HOUSEPART" value="YES" constant="no"/>
-<attribute name="MPN" value="MF-DIO-SOD123-BAT42" constant="no"/>
-<attribute name="POPULATE" value="1" constant="no"/>
-<attribute name="URL" value="https://factory.macrofab.com/part/MF-DIO-SOD123-BAT42" constant="no"/>
-<attribute name="VALUE" value="MF-DIO-SOD123-BAT42" constant="no"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="MF_IC_Power">
 <packages>
 <package name="SOT-23-5">
@@ -2907,12 +2729,6 @@ http://www.ladyada.net/library/pcb/eaglelibrary.html</description>
 <part name="VDD_2" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="V+" device="" value="3.3V"/>
 <part name="VDD_3" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="V+" device="" value="3.3V"/>
 <part name="VDD_4" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="V+" device="" value="3.3V"/>
-<part name="U$2" library="tilesPartComp" deviceset="VBAT" device=""/>
-<part name="U$3" library="tilesPartComp" deviceset="VUSB" device=""/>
-<part name="MOS1" library="tilesPartComp" deviceset="DMG3415U" device="" technology="-7">
-<attribute name="MPN" value="DMG3415U-7"/>
-</part>
-<part name="D1" library="MF_Discrete_Semiconductor" deviceset="DIODES" device="_SMA" technology="_B140" value="MF-DIO-SMA-B140"/>
 <part name="USB1" library="tilesPartComp" deviceset="ZX62R-B-5P(30)" device="">
 <attribute name="MPN" value="ZX62R-B-5P(30)"/>
 </part>
@@ -3040,6 +2856,11 @@ http://www.ladyada.net/library/pcb/eaglelibrary.html</description>
 <attribute name="HOUSEPART" value="YES"/>
 <attribute name="MPN" value="MF-IND-1210-10uH"/>
 </part>
+<part name="MOS2" library="tilesPartComp" deviceset="FDFMA2P029Z" device="">
+<attribute name="MPN" value="FDFMA2P029Z"/>
+</part>
+<part name="U$1" library="tilesPartComp" deviceset="VBAT" device=""/>
+<part name="U$7" library="tilesPartComp" deviceset="VUSB" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -3110,19 +2931,13 @@ FRST / P0.22 = if GND at startup factory reset and reboot into bootloader</text>
 <instance part="U4" gate="U$1" x="68.58" y="226.06">
 <attribute name="MPN" x="68.58" y="226.06" size="1.778" layer="96" display="off"/>
 </instance>
-<instance part="GND1" gate="1" x="-81.28" y="320.04"/>
+<instance part="GND1" gate="1" x="-101.6" y="320.04"/>
 <instance part="GND2" gate="1" x="-66.04" y="320.04"/>
 <instance part="GND4" gate="1" x="-5.08" y="320.04"/>
 <instance part="VDD_1" gate="1" x="33.02" y="281.94"/>
 <instance part="VDD_2" gate="1" x="93.98" y="281.94"/>
 <instance part="VDD_3" gate="1" x="38.1" y="195.58"/>
 <instance part="VDD_4" gate="1" x="-5.08" y="368.3"/>
-<instance part="U$2" gate="G$1" x="-66.04" y="368.3"/>
-<instance part="U$3" gate="G$2" x="-81.28" y="368.3"/>
-<instance part="MOS1" gate="DMG3415U*" x="-68.58" y="355.6">
-<attribute name="MPN" x="-68.58" y="355.6" size="1.778" layer="96" display="off"/>
-</instance>
-<instance part="D1" gate="G$1" x="-76.2" y="345.44"/>
 <instance part="USB1" gate="ZX62R-B-5P(30)" x="45.72" y="355.6">
 <attribute name="MPN" x="45.72" y="355.6" size="1.778" layer="96" display="off"/>
 </instance>
@@ -3164,7 +2979,7 @@ FRST / P0.22 = if GND at startup factory reset and reboot into bootloader</text>
 <instance part="HU1" gate="HDC2010" x="10.16" y="106.68">
 <attribute name="MPN" x="10.16" y="106.68" size="1.778" layer="96" display="off"/>
 </instance>
-<instance part="R7" gate="G$1" x="-81.28" y="335.28"/>
+<instance part="R7" gate="G$1" x="-101.6" y="337.82"/>
 <instance part="R1" gate="G$1" x="-50.8" y="342.9" rot="R90"/>
 <instance part="C7" gate="G$1" x="-66.04" y="330.2"/>
 <instance part="C1" gate="G$1" x="-5.08" y="335.28"/>
@@ -3193,6 +3008,11 @@ FRST / P0.22 = if GND at startup factory reset and reboot into bootloader</text>
 <instance part="C8" gate="G$1" x="38.1" y="185.42"/>
 <instance part="C9" gate="G$1" x="68.58" y="294.64"/>
 <instance part="L1" gate="G$1" x="53.34" y="274.32" rot="R90"/>
+<instance part="MOS2" gate="G$1" x="-83.82" y="350.52">
+<attribute name="MPN" x="-83.82" y="350.52" size="1.778" layer="96" display="off"/>
+</instance>
+<instance part="U$1" gate="G$1" x="-109.22" y="370.84"/>
+<instance part="U$7" gate="G$2" x="-101.6" y="370.84"/>
 </instances>
 <busses>
 </busses>
@@ -3337,7 +3157,7 @@ FRST / P0.22 = if GND at startup factory reset and reboot into bootloader</text>
 <segment>
 <pinref part="R7" gate="G$1" pin="P$2"/>
 <pinref part="GND1" gate="1" pin="GND"/>
-<wire x1="-81.28" y1="330.2" x2="-81.28" y2="322.58" width="0.1524" layer="91"/>
+<wire x1="-101.6" y1="332.74" x2="-101.6" y2="322.58" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="GND11" gate="1" pin="GND"/>
@@ -3858,22 +3678,6 @@ FRST / P0.22 = if GND at startup factory reset and reboot into bootloader</text>
 <wire x1="-119.38" y1="187.96" x2="-111.76" y2="187.96" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$2" class="0">
-<segment>
-<wire x1="-66.04" y1="345.44" x2="-55.88" y2="345.44" width="0.1524" layer="91"/>
-<pinref part="MOS1" gate="DMG3415U*" pin="S"/>
-<wire x1="-55.88" y1="345.44" x2="-40.64" y2="345.44" width="0.1524" layer="91"/>
-<wire x1="-66.04" y1="332.74" x2="-66.04" y2="345.44" width="0.1524" layer="91"/>
-<junction x="-66.04" y="345.44"/>
-<pinref part="D1" gate="G$1" pin="CATHODE"/>
-<wire x1="-73.66" y1="345.44" x2="-66.04" y2="345.44" width="0.1524" layer="91"/>
-<pinref part="R1" gate="G$1" pin="P$1"/>
-<wire x1="-55.88" y1="342.9" x2="-55.88" y2="345.44" width="0.1524" layer="91"/>
-<junction x="-55.88" y="345.44"/>
-<pinref part="C7" gate="G$1" pin="P$1"/>
-<pinref part="U1" gate="G$1" pin="VIN"/>
-</segment>
-</net>
 <net name="USBD-" class="0">
 <segment>
 <pinref part="USB1" gate="ZX62R-B-5P(30)" pin="2"/>
@@ -3919,11 +3723,6 @@ FRST / P0.22 = if GND at startup factory reset and reboot into bootloader</text>
 </net>
 <net name="VBAT" class="0">
 <segment>
-<pinref part="MOS1" gate="DMG3415U*" pin="D"/>
-<pinref part="U$2" gate="G$1" pin="VBAT"/>
-<wire x1="-66.04" y1="363.22" x2="-66.04" y2="365.76" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="U$6" gate="G$1" pin="VBAT"/>
 <wire x1="157.48" y1="363.22" x2="157.48" y2="353.06" width="0.1524" layer="91"/>
 <pinref part="IC1" gate="G$1" pin="VBAT"/>
@@ -3939,21 +3738,14 @@ FRST / P0.22 = if GND at startup factory reset and reboot into bootloader</text>
 <pinref part="BAT+" gate="G$1" pin="P$1"/>
 <wire x1="-53.34" y1="236.22" x2="-53.34" y2="248.92" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="VBAT"/>
+<pinref part="MOS2" gate="G$1" pin="D"/>
+<wire x1="-109.22" y1="368.3" x2="-109.22" y2="345.44" width="0.1524" layer="91"/>
+<wire x1="-109.22" y1="345.44" x2="-99.06" y2="345.44" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="VUSB" class="0">
-<segment>
-<pinref part="U$3" gate="G$2" pin="VUSB"/>
-<pinref part="MOS1" gate="DMG3415U*" pin="G"/>
-<wire x1="-81.28" y1="345.44" x2="-81.28" y2="353.06" width="0.1524" layer="91"/>
-<wire x1="-81.28" y1="353.06" x2="-81.28" y2="365.76" width="0.1524" layer="91"/>
-<wire x1="-76.2" y1="353.06" x2="-81.28" y2="353.06" width="0.1524" layer="91"/>
-<junction x="-81.28" y="353.06"/>
-<pinref part="D1" gate="G$1" pin="ANODE"/>
-<wire x1="-78.74" y1="345.44" x2="-81.28" y2="345.44" width="0.1524" layer="91"/>
-<pinref part="R7" gate="G$1" pin="P$1"/>
-<wire x1="-81.28" y1="345.44" x2="-81.28" y2="340.36" width="0.1524" layer="91"/>
-<junction x="-81.28" y="345.44"/>
-</segment>
 <segment>
 <pinref part="U$4" gate="G$2" pin="VUSB"/>
 <wire x1="35.56" y1="347.98" x2="35.56" y2="340.36" width="0.1524" layer="91"/>
@@ -3970,6 +3762,21 @@ FRST / P0.22 = if GND at startup factory reset and reboot into bootloader</text>
 <wire x1="73.66" y1="342.9" x2="73.66" y2="353.06" width="0.1524" layer="91"/>
 <junction x="73.66" y="353.06"/>
 <pinref part="D3" gate="G$1" pin="ANODE"/>
+</segment>
+<segment>
+<pinref part="U$7" gate="G$2" pin="VUSB"/>
+<wire x1="-101.6" y1="368.3" x2="-101.6" y2="363.22" width="0.1524" layer="91"/>
+<pinref part="MOS2" gate="G$1" pin="G"/>
+<wire x1="-63.5" y1="363.22" x2="-63.5" y2="350.52" width="0.1524" layer="91"/>
+<wire x1="-63.5" y1="350.52" x2="-68.58" y2="350.52" width="0.1524" layer="91"/>
+<wire x1="-63.5" y1="363.22" x2="-101.6" y2="363.22" width="0.1524" layer="91"/>
+<pinref part="R7" gate="G$1" pin="P$1"/>
+<wire x1="-101.6" y1="363.22" x2="-101.6" y2="355.6" width="0.1524" layer="91"/>
+<junction x="-101.6" y="363.22"/>
+<pinref part="MOS2" gate="G$1" pin="A"/>
+<wire x1="-101.6" y1="355.6" x2="-101.6" y2="342.9" width="0.1524" layer="91"/>
+<wire x1="-99.06" y1="355.6" x2="-101.6" y2="355.6" width="0.1524" layer="91"/>
+<junction x="-101.6" y="355.6"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -4011,6 +3818,25 @@ FRST / P0.22 = if GND at startup factory reset and reboot into bootloader</text>
 <pinref part="L10" gate="L$1" pin="1"/>
 <pinref part="L1" gate="G$1" pin="P$2"/>
 <wire x1="53.34" y1="279.4" x2="53.34" y2="281.94" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$12" class="0">
+<segment>
+<pinref part="MOS2" gate="G$1" pin="C"/>
+<wire x1="-68.58" y1="355.6" x2="-66.04" y2="355.6" width="0.1524" layer="91"/>
+<wire x1="-66.04" y1="355.6" x2="-66.04" y2="345.44" width="0.1524" layer="91"/>
+<pinref part="MOS2" gate="G$1" pin="S"/>
+<wire x1="-66.04" y1="345.44" x2="-68.58" y2="345.44" width="0.1524" layer="91"/>
+<junction x="-66.04" y="345.44"/>
+<wire x1="-66.04" y1="345.44" x2="-55.88" y2="345.44" width="0.1524" layer="91"/>
+<wire x1="-55.88" y1="345.44" x2="-40.64" y2="345.44" width="0.1524" layer="91"/>
+<wire x1="-66.04" y1="332.74" x2="-66.04" y2="345.44" width="0.1524" layer="91"/>
+<pinref part="R1" gate="G$1" pin="P$1"/>
+<wire x1="-55.88" y1="342.9" x2="-55.88" y2="345.44" width="0.1524" layer="91"/>
+<junction x="-55.88" y="345.44"/>
+<pinref part="C7" gate="G$1" pin="P$1"/>
+<pinref part="U1" gate="G$1" pin="VIN"/>
+<junction x="-66.04" y="345.44"/>
 </segment>
 </net>
 </nets>
