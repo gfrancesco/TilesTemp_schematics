@@ -1904,6 +1904,36 @@ http://www.ladyada.net/library/pcb/eaglelibrary.html</description>
 <wire x1="2.2" y1="1.6" x2="-2.2" y2="1.6" width="0.127" layer="21"/>
 <text x="-2.2" y="1.8" size="1.016" layer="25" font="vector" ratio="16">&gt;NAME</text>
 </package>
+<package name="L0402">
+<description>&lt;b&gt;Description:&lt;/b&gt; Standard 0402 Package for Inductors&lt;br/&gt;</description>
+<smd name="P$1" x="-0.55" y="0" dx="0.5" dy="0.6" layer="1" rot="R180"/>
+<smd name="P$2" x="0.55" y="0" dx="0.5" dy="0.6" layer="1" rot="R180"/>
+<wire x1="-1.1" y1="0.55" x2="-1.1" y2="-0.55" width="0.127" layer="21"/>
+<wire x1="-1.1" y1="-0.55" x2="1.1" y2="-0.55" width="0.127" layer="21"/>
+<wire x1="1.1" y1="-0.55" x2="1.1" y2="0.55" width="0.127" layer="21"/>
+<wire x1="1.1" y1="0.55" x2="-1.1" y2="0.55" width="0.127" layer="21"/>
+<text x="-1.1" y="1.1" size="1.016" layer="25" font="vector" ratio="16">&gt;NAME</text>
+</package>
+<package name="L0603">
+<description>&lt;b&gt;Description:&lt;/b&gt; Standard 0603 Package for Inductors&lt;br/&gt;</description>
+<smd name="P$1" x="-0.75" y="0" dx="0.6" dy="0.9" layer="1" rot="R180"/>
+<smd name="P$2" x="0.75" y="0" dx="0.6" dy="0.9" layer="1" rot="R180"/>
+<wire x1="-1.4" y1="0.7" x2="-1.4" y2="-0.7" width="0.127" layer="21"/>
+<wire x1="-1.4" y1="-0.7" x2="1.4" y2="-0.7" width="0.127" layer="21"/>
+<wire x1="1.4" y1="-0.7" x2="1.4" y2="0.7" width="0.127" layer="21"/>
+<wire x1="1.4" y1="0.7" x2="-1.4" y2="0.7" width="0.127" layer="21"/>
+<text x="-1.4" y="1.1" size="1.016" layer="25" font="vector" ratio="16">&gt;NAME</text>
+</package>
+<package name="L1210">
+<description>&lt;b&gt;Description:&lt;/b&gt; Standard 1210 Package for Inductors&lt;br/&gt;</description>
+<smd name="P$1" x="-1.45" y="0" dx="0.9" dy="2.5" layer="1" rot="R180"/>
+<smd name="P$2" x="1.45" y="0" dx="0.9" dy="2.5" layer="1" rot="R180"/>
+<wire x1="-2.2" y1="1.6" x2="-2.2" y2="-1.575" width="0.127" layer="21"/>
+<wire x1="-2.2" y1="-1.575" x2="2.2" y2="-1.575" width="0.127" layer="21"/>
+<wire x1="2.2" y1="-1.575" x2="2.2" y2="1.6" width="0.127" layer="21"/>
+<wire x1="2.2" y1="1.6" x2="-2.2" y2="1.6" width="0.127" layer="21"/>
+<text x="-2.2" y="1.8" size="1.016" layer="25" font="vector" ratio="16">&gt;NAME</text>
+</package>
 </packages>
 <symbols>
 <symbol name="RESISTOR">
@@ -1934,6 +1964,18 @@ http://www.ladyada.net/library/pcb/eaglelibrary.html</description>
 <wire x1="0" y1="-2.54" x2="0" y2="-1.016" width="0.1524" layer="94"/>
 <rectangle x1="-1.778" y1="0.508" x2="1.778" y2="1.27" layer="94"/>
 <rectangle x1="-1.778" y1="-1.27" x2="1.778" y2="-0.508" layer="94"/>
+</symbol>
+<symbol name="INDUCTOR">
+<description>&lt;b&gt;Library:&lt;/b&gt;  MF_Passives&lt;br/&gt;
+&lt;b&gt;Description:&lt;/b&gt; Symbol for Inductors&lt;br/&gt;</description>
+<pin name="P$1" x="-5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1"/>
+<pin name="P$2" x="5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
+<text x="-5.08" y="5.08" size="1.016" layer="95" font="vector" align="top-left">&gt;NAME</text>
+<text x="-5.08" y="2.54" size="1.016" layer="96" font="vector">&gt;VALUE</text>
+<wire x1="-2.54" y1="0" x2="-1.27" y2="0" width="0.1524" layer="94" curve="-180"/>
+<wire x1="-1.27" y1="0" x2="0" y2="0" width="0.1524" layer="94" curve="-180"/>
+<wire x1="0" y1="0" x2="1.27" y2="0" width="0.1524" layer="94" curve="-180"/>
+<wire x1="1.27" y1="0" x2="2.54" y2="0" width="0.1524" layer="94" curve="-180"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -2130,6 +2172,60 @@ http://www.ladyada.net/library/pcb/eaglelibrary.html</description>
 <attribute name="URL" value="" constant="no"/>
 <attribute name="VALUE" value="" constant="no"/>
 <attribute name="VOLTAGE" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="INDUCTOR" prefix="L" uservalue="yes">
+<description>&lt;b&gt;Library:&lt;/b&gt;  MF_Passives&lt;br/&gt;
+&lt;b&gt;Description:&lt;/b&gt; Device for Inductors. Manufacture part number (MPN) can be added via Attributes. Check https://factory.macrofab.com/parts for the house parts list.&lt;br/&gt;</description>
+<gates>
+<gate name="G$1" symbol="INDUCTOR" x="0" y="0"/>
+</gates>
+<devices>
+<device name="_0402" package="L0402">
+<connects>
+<connect gate="G$1" pin="P$1" pad="P$1"/>
+<connect gate="G$1" pin="P$2" pad="P$2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="HOUSEPART" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="POPULATE" value="1" constant="no"/>
+<attribute name="URL" value="" constant="no"/>
+<attribute name="VALUE" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="_0603" package="L0603">
+<connects>
+<connect gate="G$1" pin="P$1" pad="P$1"/>
+<connect gate="G$1" pin="P$2" pad="P$2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="HOUSEPART" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="POPULATE" value="1" constant="no"/>
+<attribute name="URL" value="" constant="no"/>
+<attribute name="VALUE" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="_1210" package="L1210">
+<connects>
+<connect gate="G$1" pin="P$1" pad="P$1"/>
+<connect gate="G$1" pin="P$2" pad="P$2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="HOUSEPART" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="POPULATE" value="" constant="no"/>
+<attribute name="URL" value="" constant="no"/>
+<attribute name="VALUE" value="" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -2777,20 +2873,33 @@ http://www.ladyada.net/library/pcb/eaglelibrary.html</description>
 <part name="GND34" library="supply1" deviceset="GND" device=""/>
 <part name="GND35" library="supply1" deviceset="GND" device=""/>
 <part name="GND36" library="supply1" deviceset="GND" device=""/>
-<part name="X6" library="Nordic_nRF" deviceset="XTAL_32KHZ" device="" value="32.768kHz"/>
-<part name="L9" library="Nordic_nRF" deviceset="INDUCTOR" device="_0603_N" value="10µH"/>
-<part name="L10" library="Nordic_nRF" deviceset="INDUCTOR" device="_0402_N" value="15nH"/>
-<part name="C33" library="Nordic_nRF" deviceset="CAPACITOR" device="_0402_N" value="12pF"/>
-<part name="C34" library="Nordic_nRF" deviceset="CAPACITOR" device="_0402_N" value="12pF"/>
-<part name="C36" library="Nordic_nRF" deviceset="CAPACITOR" device="_0402_N" value="100nF"/>
-<part name="C37" library="Nordic_nRF" deviceset="CAPACITOR" device="_0402_N" value="100nF"/>
-<part name="C39" library="Nordic_nRF" deviceset="CAPACITOR" device="_0402_N" value="100pF"/>
-<part name="C40" library="Nordic_nRF" deviceset="CAPACITOR" device="_0402_N" value="100nF"/>
-<part name="C41" library="Nordic_nRF" deviceset="CAPACITOR" device="_0603_N" value="4.7µF"/>
-<part name="C42" library="Nordic_nRF" deviceset="CAPACITOR" device="_0603_N" value="1.0µF"/>
-<part name="C43" library="Nordic_nRF" deviceset="CAPACITOR" device="_0402_N" value="12pF"/>
-<part name="C44" library="Nordic_nRF" deviceset="CAPACITOR" device="_0402_N" value="12pF"/>
-<part name="U4" library="Nordic_nRF" deviceset="NRF52832" device=""/>
+<part name="X6" library="Nordic_nRF" deviceset="XTAL_32KHZ" device="" value="32.768kHz">
+<attribute name="MPN" value="LFXTAL009706REEL"/>
+</part>
+<part name="L10" library="Nordic_nRF" deviceset="INDUCTOR" device="_0402_N" value="15nH">
+<attribute name="MPN" value="L-07C15NJV6T"/>
+</part>
+<part name="C33" library="Nordic_nRF" deviceset="CAPACITOR" device="_0402_N" value="12pF">
+<attribute name="MPN" value="C0402C120J5GACTU"/>
+</part>
+<part name="C34" library="Nordic_nRF" deviceset="CAPACITOR" device="_0402_N" value="12pF">
+<attribute name="MPN" value="C0402C120J5GACTU"/>
+</part>
+<part name="C39" library="Nordic_nRF" deviceset="CAPACITOR" device="_0402_N" value="100pF">
+<attribute name="MPN" value="GRM1555C1H101GA01D"/>
+</part>
+<part name="C41" library="Nordic_nRF" deviceset="CAPACITOR" device="_0603_N" value="4.7µF">
+<attribute name="MPN" value="06036D475KAT2A"/>
+</part>
+<part name="C43" library="Nordic_nRF" deviceset="CAPACITOR" device="_0402_N" value="12pF">
+<attribute name="MPN" value="C0402C120J5GACTU"/>
+</part>
+<part name="C44" library="Nordic_nRF" deviceset="CAPACITOR" device="_0402_N" value="12pF">
+<attribute name="MPN" value="C0402C120J5GACTU"/>
+</part>
+<part name="U4" library="Nordic_nRF" deviceset="NRF52832" device="">
+<attribute name="MPN" value="NRF52832-QFAA-R7"/>
+</part>
 <part name="GND1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
@@ -2800,12 +2909,18 @@ http://www.ladyada.net/library/pcb/eaglelibrary.html</description>
 <part name="VDD_4" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="V+" device="" value="3.3V"/>
 <part name="U$2" library="tilesPartComp" deviceset="VBAT" device=""/>
 <part name="U$3" library="tilesPartComp" deviceset="VUSB" device=""/>
-<part name="MOS1" library="tilesPartComp" deviceset="DMG3415U" device="" technology="-7"/>
+<part name="MOS1" library="tilesPartComp" deviceset="DMG3415U" device="" technology="-7">
+<attribute name="MPN" value="DMG3415U-7"/>
+</part>
 <part name="D1" library="MF_Discrete_Semiconductor" deviceset="DIODES" device="_SMA" technology="_B140" value="MF-DIO-SMA-B140"/>
-<part name="USB1" library="tilesPartComp" deviceset="ZX62R-B-5P(30)" device=""/>
+<part name="USB1" library="tilesPartComp" deviceset="ZX62R-B-5P(30)" device="">
+<attribute name="MPN" value="ZX62R-B-5P(30)"/>
+</part>
 <part name="GND5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="U$4" library="tilesPartComp" deviceset="VUSB" device=""/>
-<part name="IC1" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="MCP73831" device="/OT"/>
+<part name="IC1" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="MCP73831" device="/OT">
+<attribute name="MPN" value="MCP73831T-2ACI/OT"/>
+</part>
 <part name="U$5" library="tilesPartComp" deviceset="VUSB" device=""/>
 <part name="GND7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="U$6" library="tilesPartComp" deviceset="VBAT" device=""/>
@@ -2814,21 +2929,31 @@ http://www.ladyada.net/library/pcb/eaglelibrary.html</description>
 <part name="DFU" library="microbuilder" deviceset="TESTPOINT" device="ROUND2MM"/>
 <part name="GND13" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="U$10" library="tilesPartComp" deviceset="VBAT" device=""/>
-<part name="ANT1" library="tilesPartComp" deviceset="2450AT45A100" device=""/>
+<part name="ANT1" library="tilesPartComp" deviceset="2450AT45A100" device="">
+<attribute name="MPN" value="2450AT45A100E"/>
+</part>
 <part name="GND10" library="supply1" deviceset="GND" device=""/>
-<part name="F1" library="tilesPartComp" deviceset="2450FM07A0029" device=""/>
-<part name="T1" library="tilesPartComp" deviceset="SI7051-A20" device=""/>
+<part name="F1" library="tilesPartComp" deviceset="2450FM07A0029" device="">
+<attribute name="MPN" value="2450FM07A0029T"/>
+</part>
+<part name="T1" library="tilesPartComp" deviceset="SI7051-A20" device="">
+<attribute name="MPN" value="SI7051-A20-IM"/>
+</part>
 <part name="VDD_9" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="V+" device="" value="3.3V"/>
 <part name="GND14" library="supply1" deviceset="GND" device=""/>
 <part name="GND15" library="supply1" deviceset="GND" device=""/>
 <part name="GND16" library="supply1" deviceset="GND" device=""/>
-<part name="X1" library="tilesPartComp" deviceset="LFXTAL069526" device=""/>
+<part name="X1" library="tilesPartComp" deviceset="LFXTAL069526" device="">
+<attribute name="MPN" value="LFXTAL069526CUTT"/>
+</part>
 <part name="VDD_10" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="V+" device="" value="3.3V"/>
 <part name="GND18" library="supply1" deviceset="GND" device=""/>
 <part name="SWDCLK" library="microbuilder" deviceset="TESTPOINT" device="ROUND2MM"/>
 <part name="SWDIO" library="microbuilder" deviceset="TESTPOINT" device="ROUND2MM"/>
 <part name="VDD" library="microbuilder" deviceset="TESTPOINT" device="ROUND2MM"/>
-<part name="HU1" library="tilesPartComp" deviceset="HDC2010" device=""/>
+<part name="HU1" library="tilesPartComp" deviceset="HDC2010" device="">
+<attribute name="MPN" value="HDC2010YPAR"/>
+</part>
 <part name="R7" library="MF_Passives" deviceset="RESISTOR" device="_0402" value="100K">
 <attribute name="HOUSEPART" value="YES"/>
 <attribute name="MPN" value="MF-RES-0402-100K"/>
@@ -2838,9 +2963,11 @@ http://www.ladyada.net/library/pcb/eaglelibrary.html</description>
 <attribute name="MPN" value="MF-RES-0402-100K"/>
 </part>
 <part name="C7" library="MF_Passives" deviceset="CAPACITOR_NP" device="_0603" value="10uF">
+<attribute name="HOUSEPART" value="YES"/>
 <attribute name="MPN" value="JMK107ABJ106KA-T"/>
 </part>
 <part name="C1" library="MF_Passives" deviceset="CAPACITOR_NP" device="_0603" value="10uF">
+<attribute name="HOUSEPART" value="YES"/>
 <attribute name="MPN" value="JMK107ABJ106KA-T"/>
 </part>
 <part name="U1" library="MF_IC_Power" deviceset="TLV702" device="33PDBVR" value="MF-REG-SOT235-3.3V-300mA"/>
@@ -2858,6 +2985,7 @@ http://www.ladyada.net/library/pcb/eaglelibrary.html</description>
 <attribute name="MPN" value="MF-RES-0402-18K"/>
 </part>
 <part name="C2" library="MF_Passives" deviceset="CAPACITOR_NP" device="_0603" value="10uF">
+<attribute name="HOUSEPART" value="YES"/>
 <attribute name="MPN" value="JMK107ABJ106KA-T"/>
 </part>
 <part name="SW1" library="MF_Switches" deviceset="TACT" device="_4.2MM" value="MF-SW-TACT-4.2MM"/>
@@ -2892,6 +3020,26 @@ http://www.ladyada.net/library/pcb/eaglelibrary.html</description>
 </part>
 <part name="BAT-" library="microbuilder" deviceset="TESTPOINT" device="ROUND2MM"/>
 <part name="BAT+" library="microbuilder" deviceset="TESTPOINT" device="ROUND2MM"/>
+<part name="C5" library="MF_Passives" deviceset="CAPACITOR_NP" device="_0402" value="0.1uF">
+<attribute name="HOUSEPART" value="YES"/>
+<attribute name="MPN" value="MF-CAP-0402-0.1uF"/>
+</part>
+<part name="C6" library="MF_Passives" deviceset="CAPACITOR_NP" device="_0402" value="0.1uF">
+<attribute name="HOUSEPART" value="YES"/>
+<attribute name="MPN" value="MF-CAP-0402-0.1uF"/>
+</part>
+<part name="C8" library="MF_Passives" deviceset="CAPACITOR_NP" device="_0402" value="0.1uF">
+<attribute name="HOUSEPART" value="YES"/>
+<attribute name="MPN" value="MF-CAP-0402-0.1uF"/>
+</part>
+<part name="C9" library="MF_Passives" deviceset="CAPACITOR_NP" device="_0603" value="1.0uF">
+<attribute name="HOUSEPART" value="YES"/>
+<attribute name="MPN" value="MF-CAP-0603-1uF"/>
+</part>
+<part name="L1" library="MF_Passives" deviceset="INDUCTOR" device="_1210" value="10uH">
+<attribute name="HOUSEPART" value="YES"/>
+<attribute name="MPN" value="MF-IND-1210-10uH"/>
+</part>
 </parts>
 <sheets>
 <sheet>
@@ -2933,23 +3081,35 @@ FRST / P0.22 = if GND at startup factory reset and reboot into bootloader</text>
 <instance part="GND34" gate="1" x="-27.94" y="231.14" rot="MR0"/>
 <instance part="GND35" gate="1" x="170.18" y="231.14" rot="MR0"/>
 <instance part="GND36" gate="1" x="124.46" y="261.62" rot="MR0"/>
-<instance part="L10" gate="L$1" x="53.34" y="289.56" rot="R180"/>
-<instance part="L9" gate="L$1" x="53.34" y="274.32" rot="R180"/>
-<instance part="C33" gate="C$1" x="162.56" y="269.24" rot="R90"/>
-<instance part="C34" gate="C$1" x="162.56" y="236.22" rot="R90"/>
-<instance part="C36" gate="C$1" x="17.78" y="271.78"/>
-<instance part="C37" gate="C$1" x="38.1" y="185.42"/>
-<instance part="C40" gate="C$1" x="93.98" y="271.78"/>
-<instance part="C39" gate="C$1" x="109.22" y="271.78"/>
-<instance part="C41" gate="C$1" x="33.02" y="271.78"/>
-<instance part="C42" gate="C$1" x="68.58" y="294.64"/>
+<instance part="L10" gate="L$1" x="53.34" y="289.56" rot="R180">
+<attribute name="MPN" x="53.34" y="289.56" size="1.778" layer="96" rot="R180" display="off"/>
+</instance>
+<instance part="C33" gate="C$1" x="162.56" y="269.24" rot="R90">
+<attribute name="MPN" x="162.56" y="269.24" size="1.778" layer="96" rot="R90" display="off"/>
+</instance>
+<instance part="C34" gate="C$1" x="162.56" y="236.22" rot="R90">
+<attribute name="MPN" x="162.56" y="236.22" size="1.778" layer="96" rot="R90" display="off"/>
+</instance>
+<instance part="C39" gate="C$1" x="109.22" y="271.78">
+<attribute name="MPN" x="109.22" y="271.78" size="1.778" layer="96" display="off"/>
+</instance>
+<instance part="C41" gate="C$1" x="33.02" y="271.78">
+<attribute name="MPN" x="33.02" y="271.78" size="1.778" layer="96" display="off"/>
+</instance>
 <instance part="X6" gate="X$1" x="-10.16" y="246.38" smashed="yes" rot="R270">
 <attribute name="NAME" x="-4.064" y="248.92" size="1.778" layer="95" rot="R270"/>
 <attribute name="VALUE" x="-6.35" y="248.92" size="1.778" layer="96" rot="R270"/>
+<attribute name="MPN" x="-10.16" y="246.38" size="1.778" layer="96" rot="R270" display="off"/>
 </instance>
-<instance part="C43" gate="C$1" x="-22.86" y="254" rot="R90"/>
-<instance part="C44" gate="C$1" x="-22.86" y="236.22" rot="R90"/>
-<instance part="U4" gate="U$1" x="68.58" y="226.06"/>
+<instance part="C43" gate="C$1" x="-22.86" y="254" rot="R90">
+<attribute name="MPN" x="-22.86" y="254" size="1.778" layer="96" rot="R90" display="off"/>
+</instance>
+<instance part="C44" gate="C$1" x="-22.86" y="236.22" rot="R90">
+<attribute name="MPN" x="-22.86" y="236.22" size="1.778" layer="96" rot="R90" display="off"/>
+</instance>
+<instance part="U4" gate="U$1" x="68.58" y="226.06">
+<attribute name="MPN" x="68.58" y="226.06" size="1.778" layer="96" display="off"/>
+</instance>
 <instance part="GND1" gate="1" x="-81.28" y="320.04"/>
 <instance part="GND2" gate="1" x="-66.04" y="320.04"/>
 <instance part="GND4" gate="1" x="-5.08" y="320.04"/>
@@ -2959,12 +3119,18 @@ FRST / P0.22 = if GND at startup factory reset and reboot into bootloader</text>
 <instance part="VDD_4" gate="1" x="-5.08" y="368.3"/>
 <instance part="U$2" gate="G$1" x="-66.04" y="368.3"/>
 <instance part="U$3" gate="G$2" x="-81.28" y="368.3"/>
-<instance part="MOS1" gate="DMG3415U*" x="-68.58" y="355.6"/>
+<instance part="MOS1" gate="DMG3415U*" x="-68.58" y="355.6">
+<attribute name="MPN" x="-68.58" y="355.6" size="1.778" layer="96" display="off"/>
+</instance>
 <instance part="D1" gate="G$1" x="-76.2" y="345.44"/>
-<instance part="USB1" gate="ZX62R-B-5P(30)" x="45.72" y="355.6"/>
+<instance part="USB1" gate="ZX62R-B-5P(30)" x="45.72" y="355.6">
+<attribute name="MPN" x="45.72" y="355.6" size="1.778" layer="96" display="off"/>
+</instance>
 <instance part="GND5" gate="1" x="50.8" y="345.44"/>
 <instance part="U$4" gate="G$2" x="35.56" y="350.52"/>
-<instance part="IC1" gate="G$1" x="111.76" y="347.98"/>
+<instance part="IC1" gate="G$1" x="111.76" y="347.98">
+<attribute name="MPN" x="111.76" y="347.98" size="1.778" layer="96" display="off"/>
+</instance>
 <instance part="U$5" gate="G$2" x="73.66" y="363.22"/>
 <instance part="GND7" gate="1" x="149.86" y="330.2"/>
 <instance part="U$6" gate="G$1" x="157.48" y="365.76"/>
@@ -2973,21 +3139,31 @@ FRST / P0.22 = if GND at startup factory reset and reboot into bootloader</text>
 <instance part="DFU" gate="G$1" x="259.08" y="175.26" rot="R90"/>
 <instance part="GND13" gate="1" x="-60.96" y="233.68"/>
 <instance part="U$10" gate="G$1" x="-45.72" y="243.84"/>
-<instance part="ANT1" gate="2450AT45A100" x="228.6" y="142.24"/>
+<instance part="ANT1" gate="2450AT45A100" x="228.6" y="142.24">
+<attribute name="MPN" x="228.6" y="142.24" size="1.778" layer="96" display="off"/>
+</instance>
 <instance part="GND10" gate="1" x="157.48" y="205.74" rot="MR0"/>
-<instance part="F1" gate="2450FM07A0029" x="137.16" y="220.98"/>
-<instance part="T1" gate="SI7051-A20" x="10.16" y="137.16"/>
+<instance part="F1" gate="2450FM07A0029" x="137.16" y="220.98">
+<attribute name="MPN" x="137.16" y="220.98" size="1.778" layer="96" display="off"/>
+</instance>
+<instance part="T1" gate="SI7051-A20" x="10.16" y="137.16">
+<attribute name="MPN" x="10.16" y="137.16" size="1.778" layer="96" display="off"/>
+</instance>
 <instance part="VDD_9" gate="1" x="48.26" y="162.56"/>
 <instance part="GND14" gate="1" x="-7.62" y="127" rot="MR0"/>
 <instance part="GND15" gate="1" x="-7.62" y="91.44" rot="MR0"/>
 <instance part="GND16" gate="1" x="40.64" y="121.92" rot="MR0"/>
-<instance part="X1" gate="LFXTAL069525-32MHZ" x="154.94" y="254"/>
+<instance part="X1" gate="LFXTAL069525-32MHZ" x="154.94" y="254">
+<attribute name="MPN" x="154.94" y="254" size="1.778" layer="96" display="off"/>
+</instance>
 <instance part="VDD_10" gate="1" x="-119.38" y="195.58"/>
 <instance part="GND18" gate="1" x="40.64" y="91.44" rot="MR0"/>
 <instance part="SWDCLK" gate="G$1" x="259.08" y="190.5" rot="R90"/>
 <instance part="SWDIO" gate="G$1" x="259.08" y="200.66" rot="R90"/>
 <instance part="VDD" gate="G$1" x="259.08" y="208.28" rot="R90"/>
-<instance part="HU1" gate="HDC2010" x="10.16" y="106.68"/>
+<instance part="HU1" gate="HDC2010" x="10.16" y="106.68">
+<attribute name="MPN" x="10.16" y="106.68" size="1.778" layer="96" display="off"/>
+</instance>
 <instance part="R7" gate="G$1" x="-81.28" y="335.28"/>
 <instance part="R1" gate="G$1" x="-50.8" y="342.9" rot="R90"/>
 <instance part="C7" gate="G$1" x="-66.04" y="330.2"/>
@@ -3012,6 +3188,11 @@ FRST / P0.22 = if GND at startup factory reset and reboot into bootloader</text>
 <instance part="R11" gate="G$1" x="-86.36" y="180.34" rot="R90"/>
 <instance part="BAT-" gate="G$1" x="-60.96" y="248.92"/>
 <instance part="BAT+" gate="G$1" x="-53.34" y="248.92"/>
+<instance part="C5" gate="G$1" x="17.78" y="271.78"/>
+<instance part="C6" gate="G$1" x="93.98" y="271.78"/>
+<instance part="C8" gate="G$1" x="38.1" y="185.42"/>
+<instance part="C9" gate="G$1" x="68.58" y="294.64"/>
+<instance part="L1" gate="G$1" x="53.34" y="274.32" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -3019,8 +3200,8 @@ FRST / P0.22 = if GND at startup factory reset and reboot into bootloader</text>
 <net name="GND" class="0">
 <segment>
 <pinref part="GND27" gate="1" pin="GND"/>
-<wire x1="38.1" y1="177.8" x2="38.1" y2="180.34" width="0.1524" layer="91"/>
-<pinref part="C37" gate="C$1" pin="2"/>
+<wire x1="38.1" y1="177.8" x2="38.1" y2="182.88" width="0.1524" layer="91"/>
+<pinref part="C8" gate="G$1" pin="P$2"/>
 </segment>
 <segment>
 <pinref part="GND29" gate="1" pin="GND"/>
@@ -3029,22 +3210,22 @@ FRST / P0.22 = if GND at startup factory reset and reboot into bootloader</text>
 </segment>
 <segment>
 <pinref part="GND28" gate="1" pin="GND"/>
-<wire x1="17.78" y1="264.16" x2="17.78" y2="266.7" width="0.1524" layer="91"/>
-<pinref part="C36" gate="C$1" pin="2"/>
+<wire x1="17.78" y1="264.16" x2="17.78" y2="269.24" width="0.1524" layer="91"/>
+<pinref part="C5" gate="G$1" pin="P$2"/>
 </segment>
 <segment>
 <pinref part="GND30" gate="1" pin="GND"/>
-<wire x1="68.58" y1="289.56" x2="68.58" y2="287.02" width="0.1524" layer="91"/>
+<wire x1="68.58" y1="292.1" x2="68.58" y2="287.02" width="0.1524" layer="91"/>
 <wire x1="63.5" y1="259.08" x2="63.5" y2="287.02" width="0.1524" layer="91"/>
 <wire x1="63.5" y1="287.02" x2="68.58" y2="287.02" width="0.1524" layer="91"/>
 <junction x="68.58" y="287.02"/>
-<pinref part="C42" gate="C$1" pin="2"/>
 <pinref part="U4" gate="U$1" pin="VSS@45"/>
+<pinref part="C9" gate="G$1" pin="P$2"/>
 </segment>
 <segment>
 <pinref part="GND31" gate="1" pin="GND"/>
-<wire x1="93.98" y1="266.7" x2="93.98" y2="264.16" width="0.1524" layer="91"/>
-<pinref part="C40" gate="C$1" pin="2"/>
+<wire x1="93.98" y1="269.24" x2="93.98" y2="264.16" width="0.1524" layer="91"/>
+<pinref part="C6" gate="G$1" pin="P$2"/>
 </segment>
 <segment>
 <pinref part="GND33" gate="1" pin="GND"/>
@@ -3183,8 +3364,8 @@ FRST / P0.22 = if GND at startup factory reset and reboot into bootloader</text>
 <wire x1="27.94" y1="241.3" x2="27.94" y2="276.86" width="0.1524" layer="91"/>
 <wire x1="27.94" y1="276.86" x2="17.78" y2="276.86" width="0.1524" layer="91"/>
 <label x="17.78" y="276.86" size="1.778" layer="95"/>
-<pinref part="C36" gate="C$1" pin="1"/>
 <pinref part="U4" gate="U$1" pin="DEC1@01"/>
+<pinref part="C5" gate="G$1" pin="P$1"/>
 </segment>
 </net>
 <net name="DEC2" class="0">
@@ -3207,8 +3388,8 @@ FRST / P0.22 = if GND at startup factory reset and reboot into bootloader</text>
 <wire x1="53.34" y1="297.18" x2="53.34" y2="299.72" width="0.1524" layer="91"/>
 <wire x1="53.34" y1="299.72" x2="60.96" y2="299.72" width="0.1524" layer="91"/>
 <junction x="60.96" y="299.72"/>
-<pinref part="C42" gate="C$1" pin="1"/>
 <pinref part="U4" gate="U$1" pin="DEC4@46"/>
+<pinref part="C9" gate="G$1" pin="P$1"/>
 </segment>
 </net>
 <net name="DEC3" class="0">
@@ -3539,19 +3720,13 @@ FRST / P0.22 = if GND at startup factory reset and reboot into bootloader</text>
 <wire x1="208.28" y1="215.9" x2="208.28" y2="213.36" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$9" class="0">
-<segment>
-<pinref part="L9" gate="L$1" pin="2"/>
-<pinref part="L10" gate="L$1" pin="1"/>
-</segment>
-</net>
 <net name="N$10" class="0">
 <segment>
 <wire x1="58.42" y1="259.08" x2="58.42" y2="264.16" width="0.1524" layer="91"/>
 <wire x1="58.42" y1="264.16" x2="53.34" y2="264.16" width="0.1524" layer="91"/>
-<pinref part="L9" gate="L$1" pin="1"/>
-<wire x1="53.34" y1="264.16" x2="53.34" y2="266.7" width="0.1524" layer="91"/>
+<wire x1="53.34" y1="264.16" x2="53.34" y2="269.24" width="0.1524" layer="91"/>
 <pinref part="U4" gate="U$1" pin="DCC@47"/>
+<pinref part="L1" gate="G$1" pin="P$1"/>
 </segment>
 </net>
 <net name="P0.00/XL1" class="0">
@@ -3617,21 +3792,21 @@ FRST / P0.22 = if GND at startup factory reset and reboot into bootloader</text>
 <wire x1="104.14" y1="241.3" x2="104.14" y2="276.86" width="0.1524" layer="91"/>
 <wire x1="104.14" y1="276.86" x2="93.98" y2="276.86" width="0.1524" layer="91"/>
 <wire x1="93.98" y1="276.86" x2="93.98" y2="274.32" width="0.1524" layer="91"/>
-<pinref part="C40" gate="C$1" pin="1"/>
 <pinref part="U4" gate="U$1" pin="VDD@36"/>
 <pinref part="VDD_2" gate="1" pin="V+"/>
 <wire x1="93.98" y1="276.86" x2="93.98" y2="279.4" width="0.1524" layer="91"/>
 <junction x="93.98" y="276.86"/>
+<pinref part="C6" gate="G$1" pin="P$1"/>
 </segment>
 <segment>
 <wire x1="38.1" y1="190.5" x2="38.1" y2="187.96" width="0.1524" layer="91"/>
 <wire x1="55.88" y1="195.58" x2="55.88" y2="190.5" width="0.1524" layer="91"/>
 <wire x1="55.88" y1="190.5" x2="38.1" y2="190.5" width="0.1524" layer="91"/>
-<pinref part="C37" gate="C$1" pin="1"/>
 <pinref part="U4" gate="U$1" pin="VDD@13"/>
 <pinref part="VDD_3" gate="1" pin="V+"/>
 <wire x1="38.1" y1="190.5" x2="38.1" y2="193.04" width="0.1524" layer="91"/>
 <junction x="38.1" y="190.5"/>
+<pinref part="C8" gate="G$1" pin="P$1"/>
 </segment>
 <segment>
 <pinref part="VDD_4" gate="1" pin="V+"/>
@@ -3831,26 +4006,16 @@ FRST / P0.22 = if GND at startup factory reset and reboot into bootloader</text>
 <wire x1="-99.06" y1="180.34" x2="-91.44" y2="180.34" width="0.1524" layer="91"/>
 </segment>
 </net>
+<net name="N$9" class="0">
+<segment>
+<pinref part="L10" gate="L$1" pin="1"/>
+<pinref part="L1" gate="G$1" pin="P$2"/>
+<wire x1="53.34" y1="279.4" x2="53.34" y2="281.94" width="0.1524" layer="91"/>
+</segment>
+</net>
 </nets>
 </sheet>
 </sheets>
-<errors>
-<approved hash="202,1,195.58,360.68,U7,RI/CLK,,,,"/>
-<approved hash="202,1,213.36,373.38,U7,DCD,,,,"/>
-<approved hash="202,1,218.44,373.38,U7,DSR,,,,"/>
-<approved hash="202,1,243.84,347.98,U7,GPIO.1/RXT,,,,"/>
-<approved hash="202,1,243.84,360.68,U7,CTS,,,,"/>
-<approved hash="208,1,33.02,279.4,V+,sup,,,,"/>
-<approved hash="208,1,93.98,279.4,V+,sup,,,,"/>
-<approved hash="208,1,38.1,193.04,V+,sup,,,,"/>
-<approved hash="208,1,2.54,365.76,V+,sup,,,,"/>
-<approved hash="208,1,-5.08,345.44,V+,out,,,,"/>
-<approved hash="208,1,167.64,363.22,V+,sup,,,,"/>
-<approved hash="208,1,236.22,317.5,V+,sup,,,,"/>
-<approved hash="208,1,241.3,256.54,V+,sup,,,,"/>
-<approved hash="208,1,48.26,160.02,V+,sup,,,,"/>
-<approved hash="208,1,-81.28,129.54,V+,sup,,,,"/>
-</errors>
 </schematic>
 </drawing>
 <compatibility>
